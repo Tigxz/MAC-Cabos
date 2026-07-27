@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAC Cabos - Produto Individual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="logo">MAC CABOS</a>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html" class="active">Produtos</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+                <li><a href="quero-revender.html">Quero Revender</a></li>
+                <li><a href="quem-usa.html">Quem Usa</a></li>
+            </ul>
+        </nav>
+        <a href="quero-revender.html" class="btn-outline">Quero Revender</a>
+    </header>
+
+    <main class="product-page-container">
+        <a href="catalogo.html" class="back-link">&larr; Voltar ao Catálogo</a>
+
+        <section class="product-view">
+            <div class="product-media">
+                <div class="main-image">
+                    <img id="main-product-img" src="" alt="Produto MAC Cabos">
+                </div>
+                <div id="thumb-grid" class="thumb-grid"></div>
+            </div>
+
+            <div class="product-info">
+                <h1 id="product-title" class="product-title">Carregando produto...</h1>
+                <p id="product-sku" class="product-sku">Código: ---</p>
+                <p id="product-description" class="product-description">Carregando descrição do produto...</p>
+
+                <div id="specs-grid" class="specs-grid"></div>
+
+                <div class="product-actions" style="margin-top: 30px;">
+                    <a id="btn-revender" href="quero-revender.html" class="btn-cyan">Quero Revender +</a>
+                    <a id="btn-ver-linha" href="catalogo.html" class="btn-outline">Ver Linha</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <h2>Outros Modelos Recomendados</h2>
+            <div id="related-grid" class="products-grid"></div>
+        </section>
+    </main>
+
+      <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">MAC CABOS</div>
+                <div class="contact-icons">
+                    <a href="mailto:sac@maccabos.com.br" aria-label="Email" class="contact-item">
+                        <i class="fas fa-envelope"></i> sac@maccabos.com.br
+                    </a>
+                    <a href="tel:+551123128000" aria-label="Telefone" class="contact-item">
+                        <i class="fas fa-phone"></i> (11) 2312-8000
+                    </a>
+                    <a href="#" aria-label="Localização" class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i> Rua Tijuco, 120 - Itaim - Diadema - SP, 09978-210
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://instagram.com/maccabos" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/maccabos" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/channel/maccabos" target="_blank" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Produtos</h4>
+                <ul>
+                    <li><a href="src/html/catalogo.html">Vintage</a></li>
+                    <li><a href="src/html/catalogo.html">Pró Premium</a></li>
+                    <li><a href="src/html/catalogo.html">Acoustic</a></li>
+                    <li><a href="src/html/catalogo.html">King Series</a></li>
+                    <li><a href="src/html/catalogo.html">Speaker Series</a></li>
+                    <li><a href="src/html/catalogo.html">Pedals & Extender</a></li>
+                    <li><a href="src/html/catalogo.html">Inox Flex</a></li>
+                    <li><a href="src/html/catalogo.html">DJ Series</a></li>
+                    <li><a href="src/html/catalogo.html">Plugs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="src/html/catalogo.html">Produtos</a></li>
+                    <li><a href="src/html/quem-somos.html">Quem Somos</a></li>
+                    <li><a href="src/html/quero-revender.html">Quero Revender</a></li>
+                    <li><a href="src/html/quem-usa.html">Quem Usa</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Políticas</h4>
+                <ul>
+                    <li><a href="src/html/politica-qualidade.html">Política de Qualidade</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAC Cabos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/products-data.js"></script>
+    <script src="../js/produto-individual.js"></script>
+</body>
+</html>

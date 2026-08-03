@@ -175,10 +175,92 @@ const products = [
     { code: 'ECO CORREIA', name: 'Correia produzida em couro ecológico', line: 'Correias', subtype: 'Correia', length: '-', connector: 'Nenhum', price: 'R$ 29.46', color: 'Preto' }
 ];
 
+const productImageMap = {
+    'IC10B': '../img/products/CLASSIC SERIES/IC10B.jpg',
+    'MC03XB': '../img/products/CLASSIC SERIES/MC03XB.jpg',
+    'MC10PB': '../img/products/CLASSIC SERIES/MC10PB.jpg',
+    'MC10XB': '../img/products/CLASSIC SERIES/MC10XB.jpg',
+    'AS10LB': '../img/products/ACOUSTIC SERIES/AS10LB.jpg',
+    'AS10LTX': '../img/products/ACOUSTIC SERIES/AS10LTX.jpg',
+    'IF10LB': '../img/products/IRONFLEX SERIES/IF10LB.jpg',
+    'IF10LAZT': '../img/products/IRONFLEX SERIES/IF10LAZT.jpg',
+    'IF10LLA': '../img/products/IRONFLEX SERIES/IF10LLA.jpg',
+    'IF10LRO': '../img/products/IRONFLEX SERIES/IF10LRO.jpg',
+    'IF10LRX': '../img/products/IRONFLEX SERIES/IF10LRX.jpg',
+    'IF10LTX': '../img/products/IRONFLEX SERIES/IF10LTX.jpg',
+    'IF10LVD': '../img/products/IRONFLEX SERIES/IF10LVD.jpg',
+    'IF10LVM': '../img/products/IRONFLEX SERIES/IF10LVM.jpg',
+    'KL10LB': '../img/products/KING SERIES/KL10LB.jpg',
+    'SG01N': '../img/products/DJ SERIES/SG01N.jpg',
+    'SG02N': '../img/products/DJ SERIES/SG02N.jpg',
+    'SG04N': '../img/products/DJ SERIES/SG04N.jpg',
+    'SG05N': '../img/products/DJ SERIES/SG05N.jpg',
+    'SG06N': '../img/products/DJ SERIES/SG06N.jpg',
+    'SG07N': '../img/products/DJ SERIES/SG07N.jpg',
+    'SG08N': '../img/products/DJ SERIES/SG08N.jpg',
+    'SG09N': '../img/products/DJ SERIES/SG09N.jpg',
+    'SG12N': '../img/products/DJ SERIES/SG12N.jpg',
+    'SG13N': '../img/products/DJ SERIES/SG13N.jpg',
+    'SG14N': '../img/products/DJ SERIES/SG14N.jpg',
+    'SG15N': '../img/products/DJ SERIES/SG15N.jpg',
+    'SG16N': '../img/products/DJ SERIES/SG16N.jpg',
+    'SG17N': '../img/products/DJ SERIES/SG17N.jpg',
+    'SG21N': '../img/products/DJ SERIES/SG21N.jpg',
+    'SG22N': '../img/products/DJ SERIES/SG22N.jpg',
+    'SG23N': '../img/products/DJ SERIES/SG23N.jpg',
+    'SG25N': '../img/products/DJ SERIES/SG25N.jpg',
+    'EX10B': '../img/products/EXTENDER SERIES/EX10B.jpg',
+    'EX10XB': '../img/products/EXTENDER SERIES/EX10XB.jpg',
+    'PIM15B': '../img/products/PEDAL SERIES/PIM15B.jpg',
+    'PIM15LTX': '../img/products/PEDAL SERIES/PIM15LTX.jpg',
+    'PIM25B': '../img/products/PEDAL SERIES/PIM25B.jpg',
+    'PIM45B': '../img/products/PEDAL SERIES/PIM45B.jpg',
+    'SSC103': '../img/products/SPEAKER SERIES/SSC103.jpg',
+    'FMC20': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg',
+    'FMC20P': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg',
+    'FI030BE': '../img/products/CABOS EM METRO/FIO INSTRUMENTO/FI030BE.jpg',
+    'FPH030M': '../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG',
+    'FM030BF+T': '../img/products/CABOS EM METRO/FIO DE MICROFONE/FM030BF+T.jpg',
+    'CEF4150': '../img/products/CABOS EM METRO/CABO COMANDO EXTRA FLEXIVEL/CEF4150.jpg',
+    'ESP30LAZ': '../img/products/VINTAGE SERIES/ESP30LAZ.jpg',
+    'ESP30LAZB': '../img/products/VINTAGE SERIES/ESP30LAZB.jpg',
+    'ESP30LAZE': '../img/products/VINTAGE SERIES/ESP30LAZE.jpg',
+    'ESP30LAZP': '../img/products/VINTAGE SERIES/ESP30LAZP.jpg',
+    'ESP30LAZT': '../img/products/VINTAGE SERIES/ESP30LAZT.jpg',
+    'ESP30LB': '../img/products/VINTAGE SERIES/ESP30LB.jpg',
+    'ESP30LBG': '../img/products/VINTAGE SERIES/ESP30LBG.jpg',
+    'ESP30LPT': '../img/products/VINTAGE SERIES/ESP30LPT.jpg',
+    'ESP30LRX': '../img/products/VINTAGE SERIES/ESP30LRX.jpg',
+    'ESP30LVM': '../img/products/VINTAGE SERIES/ESP30LVM.jpg',
+    'IC10B': '../img/products/CLASSIC SERIES/IC10B.jpg'
+};
+
+const lineImageMap = {
+    'Classic': '../img/products/CLASSIC SERIES/IC10B.jpg',
+    'Cacau Santos Signature': '../img/products/CLASSIC SERIES/IC10B.jpg',
+    'Iron Flex': '../img/products/IRONFLEX SERIES/IF10LB.jpg',
+    'Iron Flex Textil': '../img/products/IRONFLEX SERIES/IF10LTX.jpg',
+    'Iron Flex Tarja': '../img/products/IRONFLEX SERIES/IF10LTX.jpg',
+    'Vintage Espiral': '../img/products/VINTAGE SERIES/ESP30LB.jpg',
+    'Acoustic': '../img/products/ACOUSTIC SERIES/AS10LB.jpg',
+    'Keyboard': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'King Line': '../img/products/KING SERIES/KL10LB.jpg',
+    'Bass Jumbo': '../img/products/BASS JUMBO/KING BASS JUMBO.jpg',
+    'Pedal Series': '../img/products/PEDAL SERIES/PIM15B.jpg',
+    'Speaker': '../img/products/SPEAKER SERIES/SSC103.jpg',
+    'Extender': '../img/products/EXTENDER SERIES/Extender.jpeg',
+    'DJ Series': '../img/products/DJ SERIES/SG01N.jpg'
+};
+
 /**
- * Returns a sleek SVG image data URI tailored for each product line and color.
+ * Returns a product image URL if available, otherwise falls back to a line image or a generated SVG.
  */
 function getProductImageUrl(product) {
+    if (!product) return '';
+    const imagePath = productImageMap[product.code] || lineImageMap[product.line];
+    if (imagePath) {
+        return encodeURI(imagePath);
+    }
     const lineColors = {
         'Classic': '#00b4eb',
         'Cacau Santos Signature': '#ffb703',

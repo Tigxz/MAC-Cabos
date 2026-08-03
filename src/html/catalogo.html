@@ -29,17 +29,37 @@
         </section>
 
         <section class="catalogo-container">
-            <div class="filters-bar">
-                <input id="search-input" type="text" placeholder="🔍 Pesquisar por nome, código, conector..." class="search-input">
-                <select id="filter-line" class="filter-select"></select>
-                <select id="filter-length" class="filter-select"></select>
-                <select id="filter-connector" class="filter-select"></select>
-                <select id="filter-color" class="filter-select"></select>
-            </div>
-            
-            <p id="resultados-text" class="resultados-text">Mostrando resultados do catálogo.</p>
+            <div class="catalogo-layout">
+                <aside class="filters-sidebar">
+                    <div class="filters-bar">
+                        <div class="search-field">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input id="search-input" type="text" placeholder="Pesquisar por nome, código, conector..." class="search-input">
+                        </div>
+                        <label class="filter-group">
+                            <span>Linha</span>
+                            <select id="filter-line" class="filter-select"></select>
+                        </label>
+                        <label class="filter-group">
+                            <span>Comprimento</span>
+                            <select id="filter-length" class="filter-select"></select>
+                        </label>
+                        <label class="filter-group">
+                            <span>Conector</span>
+                            <select id="filter-connector" class="filter-select"></select>
+                        </label>
+                        <label class="filter-group">
+                            <span>Cor</span>
+                            <select id="filter-color" class="filter-select"></select>
+                        </label>
+                    </div>
+                </aside>
 
-            <div id="products-grid" class="products-grid"></div>
+                <div class="catalogo-content">
+                    <p id="resultados-text" class="resultados-text">Mostrando resultados do catálogo.</p>
+                    <div id="products-grid" class="products-grid"></div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -59,12 +79,9 @@
                     </a>
                 </div>
                 <div class="social-icons">
-                    <a href="https://instagram.com/maccabos" target="_blank" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://facebook.com/maccabos" target="_blank" aria-label="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://youtube.com/channel/maccabos" target="_blank" aria-label="YouTube"><i
-                            class="fab fa-youtube"></i></a>
+                    <a href="https://instagram.com/maccabos" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/maccabos" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/channel/maccabos" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
 

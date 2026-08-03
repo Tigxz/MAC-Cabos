@@ -21,6 +21,11 @@ body {
     color: var(--text-white);
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -47,6 +52,7 @@ header {
     z-index: 1000;
     min-height: 72px;
     overflow: visible;
+    animation: headerFadeIn 0.8s ease both;
 }
 
 .logo {
@@ -146,11 +152,14 @@ nav a.active::after {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: filter 0.3s;
+    transition: transform 0.25s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 0 rgba(0, 180, 235, 0);
 }
 
 .btn-cyan:hover {
+    transform: translateY(-3px);
     filter: brightness(1.2);
+    box-shadow: 0 10px 24px rgba(0, 180, 235, 0.2);
 }
 
 .btn-outline {
@@ -165,12 +174,15 @@ nav a.active::after {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    transition: border-color 0.3s;
+    transition: transform 0.25s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-outline:hover {
+    transform: translateY(-3px);
     border-color: var(--primary-cyan);
+    box-shadow: 0 10px 24px rgba(0, 180, 235, 0.12);
 }
+
 
 @keyframes fadeInUp {
     from {
@@ -180,6 +192,17 @@ nav a.active::after {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -339,33 +362,136 @@ nav a.active::after {
 }
 
 .catalogo-container {
-    padding: 40px 10% 80px;
+    padding: 40px 3% 180px;
+}
+
+.catalogo-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.filters-sidebar {
+    flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    z-index: 5;
+    padding-right: 18px;
+    border-right: 1px solid rgba(255,255,255,0.08);
 }
 
 .filters-bar {
     display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-white);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.filter-group span {
+    color: var(--text-muted);
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    min-height: 46px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-field:focus-within {
+    border-color: rgba(0, 214, 255, 0.45);
+    box-shadow: 0 0 0 2px rgba(0, 214, 255, 0.12);
+}
+
+.search-field i {
+    color: var(--primary-cyan);
+    font-size: 14px;
+    flex-shrink: 0;
 }
 
 .search-input, .filter-select {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background-color: transparent;
+    border: none;
     color: var(--text-white);
-    padding: 12px 15px;
-    border-radius: 3px;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     outline: none;
-    transition: border-color 0.3s;
+    transition: color 0.2s ease;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
 }
 
 .search-input:focus, .filter-select:focus {
-    border-color: var(--primary-cyan);
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--text-white);
 }
 
-.search-input { flex: 2; }
-.filter-select { flex: 1; cursor: pointer; }
+.filter-select {
+    width: 100%;
+    cursor: pointer;
+    padding: 12px 14px;
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--primary-cyan) 50%), linear-gradient(135deg, var(--primary-cyan) 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    padding-right: 38px;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+    border-color: rgba(0, 214, 255, 0.45);
+}
+
+.filter-select option {
+    background-color: #0d1420;
+    color: var(--text-white);
+}
+
+.catalogo-content {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    padding-left: 4px;
+}
 
 .resultados-text {
     font-size: 12px;
@@ -389,6 +515,7 @@ nav a.active::after {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
 .card img {
@@ -1353,16 +1480,29 @@ footer {
     .line-cards { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 900px) {
+    .catalogo-layout {
+        flex-direction: column !important;
+    }
+
+    .filters-sidebar {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+        position: static;
+    }
+}
+
 @media (max-width: 700px) {
     header { padding: 20px 5%; }
     .catalogo-container, .line-hero, .line-summary { padding: 40px 5%; }
-    .filters-bar { flex-direction: column; }
 }
 /* --- HERO SECTION --- */
 .hero {
     background: linear-gradient(rgba(6, 9, 14, 0.7), rgba(6, 9, 14, 0.9)), url('../img/hero-cable.jfif') center/cover no-repeat;
     text-align: center;
     padding: 120px 20px;
+    animation: heroFadeIn 1s ease both;
 }
 
 .hero h1 {
@@ -1421,25 +1561,60 @@ footer {
 
 /* --- INTRO SECTION --- */
 .intro {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 36px;
     align-items: center;
-    padding: 60px 10%;
-    background-color: var(--dark-bg);
+    padding: 80px 10%;
+    background: linear-gradient(135deg, rgba(0,180,235,0.06), rgba(6,9,14,0.95));
     border-bottom: 1px solid #1f2937;
+}
+
+.intro-content {
+    max-width: 560px;
 }
 
 .intro h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 32px;
     text-transform: uppercase;
-    width: 40%;
+    margin-bottom: 16px;
 }
 
 .intro p {
-    width: 50%;
     color: var(--text-muted);
     font-size: 14px;
+    line-height: 1.8;
+}
+
+.intro-carousel {
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    background: rgba(255,255,255,0.03);
+    padding: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: carouselSlide 18s linear infinite;
+}
+
+.carousel-track img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+@keyframes carouselSlide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* --- PRODUTOS SECTION --- */
@@ -1468,7 +1643,7 @@ footer {
     text-align: left;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, border-color 0.28s ease, box-shadow 0.28s ease;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -1478,6 +1653,8 @@ footer {
 
 .card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-cyan);
+    box-shadow: 0 18px 40px rgba(0, 180, 235, 0.12);
 }
 
 /* Efeito de brilho azul no topo do card */
@@ -1612,7 +1789,19 @@ footer {
 
 .social-icons a {
     color: var(--primary-cyan);
-    font-size: 20px;
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.08);
+    background: rgba(0,180,235,0.06);
 }
 
 .footer-bottom {

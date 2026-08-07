@@ -172,67 +172,259 @@ const products = [
     { code: 'PXFC', name: 'Conector Cannon XLR Fêmea', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'XLR', price: 'R$ 7.51', color: 'Prata' },
     { code: 'ESP', name: 'Espuma para microfone', line: 'Conectores Diversos', subtype: 'Acessório', length: '-', connector: 'Nenhum', price: 'R$ 3.20', color: 'Preto' },
     // Linha Correias
-    { code: 'ECO CORREIA', name: 'Correia produzida em couro ecológico', line: 'Correias', subtype: 'Correia', length: '-', connector: 'Nenhum', price: 'R$ 29.46', color: 'Preto' }
+    { code: 'ECO CORREIA', name: 'Correia produzida em couro ecológico', line: 'Correias', subtype: 'Correia', length: '-', connector: 'Nenhum', price: 'R$ 29.46', color: 'Preto' },
+    // --- Novas Linhas e Produtos Adicionados a partir das Imagens ---
+    // DJ Series Adicionais
+    { code: 'SG02N', name: 'Cabo DJ Series 0.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.20M', connector: 'RCA + RCA', price: 'R$ 29.90', color: 'Preto' },
+    { code: 'SG06N', name: 'Cabo DJ Series 0.60M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.60M', connector: 'RCA + RCA', price: 'R$ 34.90', color: 'Preto' },
+    { code: 'SG07N', name: 'Cabo DJ Series 0.70M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.70M', connector: 'RCA + RCA', price: 'R$ 36.90', color: 'Preto' },
+    { code: 'SG09N', name: 'Cabo DJ Series 0.90M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.90M', connector: 'RCA + RCA', price: 'R$ 39.90', color: 'Preto' },
+    { code: 'SG12N', name: 'Cabo DJ Series 1.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.20M', connector: 'RCA + RCA', price: 'R$ 44.90', color: 'Preto' },
+    { code: 'SG13N', name: 'Cabo DJ Series 1.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.30M', connector: 'RCA + RCA', price: 'R$ 46.90', color: 'Preto' },
+    { code: 'SG14N', name: 'Cabo DJ Series 1.40M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.40M', connector: 'RCA + RCA', price: 'R$ 48.90', color: 'Preto' },
+    { code: 'SG15N', name: 'Cabo DJ Series 1.50M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.50M', connector: 'RCA + RCA', price: 'R$ 51.90', color: 'Preto' },
+    { code: 'SG16N', name: 'Cabo DJ Series 1.60M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.60M', connector: 'RCA + RCA', price: 'R$ 53.90', color: 'Preto' },
+    { code: 'SG17N', name: 'Cabo DJ Series 1.70M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.70M', connector: 'RCA + RCA', price: 'R$ 55.90', color: 'Preto' },
+    { code: 'SG21N', name: 'Cabo DJ Series 2.10M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.10M', connector: 'RCA + RCA', price: 'R$ 62.90', color: 'Preto' },
+    { code: 'SG22N', name: 'Cabo DJ Series 2.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.20M', connector: 'RCA + RCA', price: 'R$ 64.90', color: 'Preto' },
+    { code: 'SG23N', name: 'Cabo DJ Series 2.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.30M', connector: 'RCA + RCA', price: 'R$ 66.90', color: 'Preto' },
+    { code: 'SG25N', name: 'Cabo DJ Series 2.50M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.50M', connector: 'RCA + RCA', price: 'R$ 69.90', color: 'Preto' },
+
+    // Conectores & Plugs
+    { code: 'P10MST', name: 'Plug P10 Macho Estéreo Metal Niquelado MAC', line: 'Conectores Diversos', subtype: 'Plug P10', length: 'Unidade', connector: 'P10 Macho', price: 'R$ 14.50', color: 'Prata' },
+    { code: 'JJ10S', name: 'Jack P10 Fêmea de Painel Estéreo/Mono', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Fêmea', price: 'R$ 18.90', color: 'Prata' },
+    { code: 'PCFPP', name: 'Plug P10 Fêmea Passa-Painel Profissional', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Passa-Painel', price: 'R$ 22.50', color: 'Preto/Prata' },
+    { code: 'PCPM', name: 'Plug P10 Macho de Painel Embutir', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 19.90', color: 'Prata' },
+    { code: 'PP2FM', name: 'Plug P2 Fêmea Metal Prata', line: 'Conectores Diversos', subtype: 'Plug P2', length: 'Unidade', connector: 'P2 Fêmea', price: 'R$ 12.90', color: 'Prata' },
+    { code: 'PP2MC', name: 'Plug P2 Macho Estéreo Metal Prata', line: 'Conectores Diversos', subtype: 'Plug P2', length: 'Unidade', connector: 'P2 Macho', price: 'R$ 11.90', color: 'Prata' },
+    { code: 'PRCA', name: 'Plug RCA Macho Profissional Metal', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 13.90', color: 'Dourado/Prata' },
+    { code: 'PRCA6P', name: 'Plug RCA Macho Profissional Corpo Preto', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 14.90', color: 'Preto' },
+    { code: 'PRCA6V', name: 'Plug RCA Macho Profissional Corpo Vermelho', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 14.90', color: 'Vermelho' },
+    { code: 'PXLJF', name: 'Jack XLR Fêmea de Painel / Linha', line: 'Conectores Diversos', subtype: 'Plug XLR', length: 'Unidade', connector: 'XLR Fêmea', price: 'R$ 21.90', color: 'Preto/Prata' },
+    { code: 'PXLJM', name: 'Jack XLR Macho de Painel / Linha', line: 'Conectores Diversos', subtype: 'Plug XLR', length: 'Unidade', connector: 'XLR Macho', price: 'R$ 21.90', color: 'Preto/Prata' },
+
+    // Cabos e Fios por Metro
+    { code: 'BICOLOR', name: 'Cabo Paralelo Bicolor 2x1.00mm² por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 4.50/m', color: 'Bicolor' },
+    { code: 'CC2100', name: 'Cabo Paralelo 2x1.00mm² Cristal/Preto por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 4.80/m', color: 'Preto' },
+    { code: 'CC2150', name: 'Cabo Paralelo 2x1.50mm² Reforçado por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 6.20/m', color: 'Preto' },
+    { code: 'CC2250', name: 'Cabo Paralelo 2x2.50mm² Alta Potência por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 8.90/m', color: 'Preto' },
+    { code: 'CEF4150', name: 'Cabo Comando Extra Flexível 4x1.50mm² por Metro', line: 'Fios Diversos', subtype: 'Cabo Comando', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 12.50/m', color: 'Preto' },
+    { code: 'FI030BE', name: 'Fio de Instrumento 0.30mm² Blindagem Espiral por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 5.90/m', color: 'Preto' },
+    { code: 'FM030BF+T', name: 'Fio de Microfone 0.30mm² Blindagem Fita + Trança por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 7.50/m', color: 'Preto' },
+    { code: 'FMC20', name: 'Fio Multicanal Medusa 20 Vias por Metro', line: 'Fio Multicanal', subtype: 'Multicanal', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 38.00/m', color: 'Preto' },
+    { code: 'FMC20P', name: 'Fio Multicanal Medusa 20 Vias com Proteção por Metro', line: 'Fio Multicanal', subtype: 'Multicanal', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 42.00/m', color: 'Preto' },
+    { code: 'FPH030M', name: 'Fio Philips Stereo 2x0.18mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Philips', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 3.90/m', color: 'Preto' },
+
+    // Iron Flex Tarja 90°
+    { code: 'IF10LAZT', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Azul Turquesa' },
+    { code: 'IF10LLA', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Laranja' },
+    { code: 'IF10LRO', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Vermelho' },
+    { code: 'IF10LRX', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Roxo' },
+    { code: 'IF10LVD', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja VD', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Verde' },
+    { code: 'IF10LVM', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Vermelho/Vinho' },
+
+    // Vintage Espiral 90°
+    { code: 'ESP30LAZB', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul/Branco', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul/Branco' },
+    { code: 'ESP30LAZE', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul Escuro', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul Escuro' },
+    { code: 'ESP30LAZP', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul/Preto', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul/Preto' },
+    { code: 'ESP30LAZT', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul Turquesa', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul Turquesa' },
+    { code: 'ESP30LPT', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Preto Têxtil', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Preto Têxtil' },
+    { code: 'ESP30LRX', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Roxo', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Roxo' },
+    { code: 'ESP30LVM', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Vermelho/Vinho', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Vermelho' },
+
+    // Pedal & Speaker Series
+    { code: 'PIM15LTX', name: 'Cabo Interconexão Pedal 15CM P10 90° + P10 90° Têxtil', line: 'Pedal Series', subtype: 'Pedal', length: '0.15M', connector: 'P10 90° + P10 90°', price: 'R$ 29.90', color: 'Têxtil' },
+    { code: 'SSC103', name: 'Cabo Caixa Acústica 10FT (3.05M) Speakon + Speakon Speaker Series', line: 'Speaker', subtype: 'Speaker', length: '10FT (3.05M)', connector: 'Speakon + Speakon', price: 'R$ 89.90', color: 'Preto' }
 ];
 
 const productImageMap = {
-    'IC10B': '../img/products/CLASSIC SERIES/IC10B.jpg',
+    'AS10LB': '../img/products/ACOUSTIC SERIES/AS10LB.jpg',
+    'AS10LTX': '../img/products/ACOUSTIC SERIES/AS10LTX.jpg',
+    'KBJ02LB': '../img/products/BASS JUMBO/King Bass Jumbo.jpeg',
+    'KBJ10LB': '../img/products/BASS JUMBO/King Bass Jumbo.jpeg',
+    'KBJ15LB': '../img/products/BASS JUMBO/King Bass Jumbo.jpeg',
+    'KBJ20LB': '../img/products/BASS JUMBO/King Bass Jumbo.jpeg',
+    'KBJ25LB': '../img/products/BASS JUMBO/King Bass Jumbo.jpeg',
+    'KBJ30LB': '../img/products/BASS JUMBO/King Bass Jumbo.jpeg',
+    'CEF4150': '../img/products/CABOS EM METRO/CABO COMANDO EXTRA FLEXIVEL/CEF4150.jpg',
+    'BICOLOR': '../img/products/CABOS EM METRO/CABOS PARALELO/CABO BICOLOR.jpg',
+    'CC2100': '../img/products/CABOS EM METRO/CABOS PARALELO/CC2100 - 2X1,00MM.jpg',
+    'CC2150': '../img/products/CABOS EM METRO/CABOS PARALELO/CC2150 - 2X1,50MM (2).jpg',
+    'CC2250': '../img/products/CABOS EM METRO/CABOS PARALELO/CC2250 - 2X2,50MM (2).jpg',
+    'FM030BF+T': '../img/products/CABOS EM METRO/FIO DE MICROFONE/FM030BF+T.jpg',
+    'FI030BE': '../img/products/CABOS EM METRO/FIO INSTRUMENTO/FI030BE.jpg',
+    'FMC20': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg',
+    'FMC20P': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg',
+    'FPH030M': '../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG',
+    'CS10LB': '../img/products/CACAU SANTOS/CS10LB lan�amento.jpeg',
+    'CS15LB': '../img/products/CACAU SANTOS/CS15LB.jpeg',
+    'IC10B': '../img/products/CLASSIC SERIES/IC10B..jpg',
     'MC03XB': '../img/products/CLASSIC SERIES/MC03XB.jpg',
     'MC10PB': '../img/products/CLASSIC SERIES/MC10PB.jpg',
     'MC10XB': '../img/products/CLASSIC SERIES/MC10XB.jpg',
-    'AS10LB': '../img/products/ACOUSTIC SERIES/AS10LB.jpg',
-    'AS10LTX': '../img/products/ACOUSTIC SERIES/AS10LTX.jpg',
-    'IF10LB': '../img/products/IRONFLEX SERIES/IF10LB.jpg',
-    'IF10LAZT': '../img/products/IRONFLEX SERIES/IF10LAZT.jpg',
-    'IF10LLA': '../img/products/IRONFLEX SERIES/IF10LLA.jpg',
-    'IF10LRO': '../img/products/IRONFLEX SERIES/IF10LRO.jpg',
-    'IF10LRX': '../img/products/IRONFLEX SERIES/IF10LRX.jpg',
-    'IF10LTX': '../img/products/IRONFLEX SERIES/IF10LTX.jpg',
-    'IF10LVD': '../img/products/IRONFLEX SERIES/IF10LVD.jpg',
-    'IF10LVM': '../img/products/IRONFLEX SERIES/IF10LVM.jpg',
-    'KL10LB': '../img/products/KING SERIES/KL10LB.jpg',
-    'SG01N': '../img/products/DJ SERIES/SG01N.jpg',
+    'SG01N': '../img/products/DJ SERIES/SG01N..jpg',
     'SG02N': '../img/products/DJ SERIES/SG02N.jpg',
     'SG04N': '../img/products/DJ SERIES/SG04N.jpg',
     'SG05N': '../img/products/DJ SERIES/SG05N.jpg',
-    'SG06N': '../img/products/DJ SERIES/SG06N.jpg',
+    'SG06N': '../img/products/DJ SERIES/SG06N (2).jpg',
     'SG07N': '../img/products/DJ SERIES/SG07N.jpg',
-    'SG08N': '../img/products/DJ SERIES/SG08N.jpg',
+    'SG08N': '../img/products/DJ SERIES/SG08N..jpg',
     'SG09N': '../img/products/DJ SERIES/SG09N.jpg',
     'SG12N': '../img/products/DJ SERIES/SG12N.jpg',
     'SG13N': '../img/products/DJ SERIES/SG13N.jpg',
     'SG14N': '../img/products/DJ SERIES/SG14N.jpg',
     'SG15N': '../img/products/DJ SERIES/SG15N.jpg',
     'SG16N': '../img/products/DJ SERIES/SG16N.jpg',
-    'SG17N': '../img/products/DJ SERIES/SG17N.jpg',
+    'SG17N': '../img/products/DJ SERIES/SG17N..jpg',
     'SG21N': '../img/products/DJ SERIES/SG21N.jpg',
-    'SG22N': '../img/products/DJ SERIES/SG22N.jpg',
-    'SG23N': '../img/products/DJ SERIES/SG23N.jpg',
+    'SG22N': '../img/products/DJ SERIES/SG22N (2).jpg',
+    'SG23N': '../img/products/DJ SERIES/SG23N (2).jpg',
     'SG25N': '../img/products/DJ SERIES/SG25N.jpg',
     'EX10B': '../img/products/EXTENDER SERIES/EX10B.jpg',
     'EX10XB': '../img/products/EXTENDER SERIES/EX10XB.jpg',
-    'PIM15B': '../img/products/PEDAL SERIES/PIM15B.jpg',
+    'EX15B': '../img/products/EXTENDER SERIES/Extender.jpeg',
+    'EX20B': '../img/products/EXTENDER SERIES/Extender.jpeg',
+    'EX25B': '../img/products/EXTENDER SERIES/Extender.jpeg',
+    'EX30B': '../img/products/EXTENDER SERIES/Extender.jpeg',
+    'EX30XB': '../img/products/EXTENDER SERIES/Extender.jpeg',
+    'IF10LAZT': '../img/products/IRONFLEX SERIES/IF10LAZT.jpg',
+    'IF10LB': '../img/products/IRONFLEX SERIES/IF10LB.jpg',
+    'IF10LLA': '../img/products/IRONFLEX SERIES/IF10LLA.jpg',
+    'IF10LRO': '../img/products/IRONFLEX SERIES/IF10LRO.jpg',
+    'IF10LRX': '../img/products/IRONFLEX SERIES/IF10LRX.jpg',
+    'IF10LTX': '../img/products/IRONFLEX SERIES/IF10LTX..jpg',
+    'IF10LVD': '../img/products/IRONFLEX SERIES/IF10LVD.jpg',
+    'IF10LVM': '../img/products/IRONFLEX SERIES/IF10LVM.jpg',
+    'KBD07B': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'KBD10B': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'KBD15B': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'KBD20B': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'KBD25B': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'KBD30B': '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg',
+    'KL10LB': '../img/products/KING SERIES/KL10LB (2).jpg',
+    'PIM15B': '../img/products/PEDAL SERIES/PIM15B...jpg',
     'PIM15LTX': '../img/products/PEDAL SERIES/PIM15LTX.jpg',
-    'PIM25B': '../img/products/PEDAL SERIES/PIM25B.jpg',
-    'PIM45B': '../img/products/PEDAL SERIES/PIM45B.jpg',
+    'PIM25B': '../img/products/PEDAL SERIES/PIM25B,.jpg',
+    'PIM45B': '../img/products/PEDAL SERIES/PIM45B,.jpg',
+    'P10MST': '../img/products/PLUGS/P10 MACHO/P10MST.jpg',
+    'JJ10S': '../img/products/PLUGS/PLUGS DE PAINEL/JJ10S (2).jpg',
+    'PCFPP': '../img/products/PLUGS/PLUGS DE PAINEL/PCFPP (2).jpg',
+    'PCPM': '../img/products/PLUGS/PLUGS DE PAINEL/PCPM (2).jpg',
+    'PP2FM': '../img/products/PLUGS/PLUGS P2/PP2FM (2).jpg',
+    'PP2MC': '../img/products/PLUGS/PLUGS P2/PP2MC (2).jpg',
+    'PRCA': '../img/products/PLUGS/RCA/PLUGS RCA (2).jpg',
+    'PRCA6P': '../img/products/PLUGS/RCA/PRCA6P (2).jpg',
+    'PRCA6V': '../img/products/PLUGS/RCA/PRCA6V (2).jpg',
+    'PXFC': '../img/products/PLUGS/XLR/PXFC (2).jpg',
+    'PXLJF': '../img/products/PLUGS/XLR/PXLJF (2).jpg',
+    'PXLJM': '../img/products/PLUGS/XLR/PXLJM (2).jpg',
+    'PXMC': '../img/products/PLUGS/XLR/PXMC (2).jpg',
     'SSC103': '../img/products/SPEAKER SERIES/SSC103.jpg',
-    'FMC20': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg',
-    'FMC20P': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg',
-    'FI030BE': '../img/products/CABOS EM METRO/FIO INSTRUMENTO/FI030BE.jpg',
-    'FPH030M': '../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG',
-    'FM030BF+T': '../img/products/CABOS EM METRO/FIO DE MICROFONE/FM030BF+T.jpg',
-    'CEF4150': '../img/products/CABOS EM METRO/CABO COMANDO EXTRA FLEXIVEL/CEF4150.jpg',
     'ESP30LAZ': '../img/products/VINTAGE SERIES/ESP30LAZ.jpg',
-    'ESP30LAZB': '../img/products/VINTAGE SERIES/ESP30LAZB.jpg',
+    'ESP30LAZB': '../img/products/VINTAGE SERIES/ESP30LAZB..jpg',
     'ESP30LAZE': '../img/products/VINTAGE SERIES/ESP30LAZE.jpg',
     'ESP30LAZP': '../img/products/VINTAGE SERIES/ESP30LAZP.jpg',
     'ESP30LAZT': '../img/products/VINTAGE SERIES/ESP30LAZT.jpg',
     'ESP30LB': '../img/products/VINTAGE SERIES/ESP30LB.jpg',
     'ESP30LBG': '../img/products/VINTAGE SERIES/ESP30LBG.jpg',
     'ESP30LPT': '../img/products/VINTAGE SERIES/ESP30LPT.jpg',
-    'ESP30LRX': '../img/products/VINTAGE SERIES/ESP30LRX.jpg',
-    'ESP30LVM': '../img/products/VINTAGE SERIES/ESP30LVM.jpg',
-    'IC10B': '../img/products/CLASSIC SERIES/IC10B.jpg'
+    'ESP30LRX': '../img/products/VINTAGE SERIES/ESP30LRX (2).jpg',
+    'ESP30LVM': '../img/products/VINTAGE SERIES/ESP30LVM (2).jpg'
+};
+
+const productImagesMap = {
+    'AS10LB': ['../img/products/ACOUSTIC SERIES/AS10LB.jpg'],
+    'AS10LTX': ['../img/products/ACOUSTIC SERIES/AS10LTX.jpg'],
+    'KBJ02LB': ['../img/products/BASS JUMBO/King Bass Jumbo.jpeg', '../img/products/BASS JUMBO/KING BASS JUMBO.jpg'],
+    'KBJ10LB': ['../img/products/BASS JUMBO/King Bass Jumbo.jpeg', '../img/products/BASS JUMBO/KING BASS JUMBO.jpg'],
+    'KBJ15LB': ['../img/products/BASS JUMBO/King Bass Jumbo.jpeg', '../img/products/BASS JUMBO/KING BASS JUMBO.jpg'],
+    'KBJ20LB': ['../img/products/BASS JUMBO/King Bass Jumbo.jpeg', '../img/products/BASS JUMBO/KING BASS JUMBO.jpg'],
+    'KBJ25LB': ['../img/products/BASS JUMBO/King Bass Jumbo.jpeg', '../img/products/BASS JUMBO/KING BASS JUMBO.jpg'],
+    'KBJ30LB': ['../img/products/BASS JUMBO/King Bass Jumbo.jpeg', '../img/products/BASS JUMBO/KING BASS JUMBO.jpg'],
+    'CEF4150': ['../img/products/CABOS EM METRO/CABO COMANDO EXTRA FLEXIVEL/CEF4150.jpg'],
+    'BICOLOR': ['../img/products/CABOS EM METRO/CABOS PARALELO/CABO BICOLOR.jpg'],
+    'CC2100': ['../img/products/CABOS EM METRO/CABOS PARALELO/CC2100 - 2X1,00MM.jpg'],
+    'CC2150': ['../img/products/CABOS EM METRO/CABOS PARALELO/CC2150 - 2X1,50MM (2).jpg', '../img/products/CABOS EM METRO/CABOS PARALELO/CC2150 - 2X1,50MM.jpg'],
+    'CC2250': ['../img/products/CABOS EM METRO/CABOS PARALELO/CC2250 - 2X2,50MM (2).jpg', '../img/products/CABOS EM METRO/CABOS PARALELO/CC2250 - 2X2,50MM.jpg'],
+    'FM030BF+T': ['../img/products/CABOS EM METRO/FIO DE MICROFONE/FM030BF+T.jpg'],
+    'FI030BE': ['../img/products/CABOS EM METRO/FIO INSTRUMENTO/FI030BE.jpg'],
+    'FMC20': ['../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg'],
+    'FMC20P': ['../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg'],
+    'FPH030M': ['../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG'],
+    'CS10LB': ['../img/products/CACAU SANTOS/CS10LB lançamento.jpeg', '../img/products/CACAU SANTOS/CS10LB pacote.png', '../img/products/CACAU SANTOS/CS10LB.jpeg'],
+    'CS15LB': ['../img/products/CACAU SANTOS/CS15LB.jpeg'],
+    'IC10B': ['../img/products/CLASSIC SERIES/IC10B..jpg', '../img/products/CLASSIC SERIES/IC10B.jpg'],
+    'MC03XB': ['../img/products/CLASSIC SERIES/MC03XB.jpg'],
+    'MC10PB': ['../img/products/CLASSIC SERIES/MC10PB.jpg'],
+    'MC10XB': ['../img/products/CLASSIC SERIES/MC10XB.jpg'],
+    'SG01N': ['../img/products/DJ SERIES/SG01N..jpg', '../img/products/DJ SERIES/SG01N.jpg'],
+    'SG02N': ['../img/products/DJ SERIES/SG02N.jpg'],
+    'SG04N': ['../img/products/DJ SERIES/SG04N.jpg'],
+    'SG05N': ['../img/products/DJ SERIES/SG05N.jpg'],
+    'SG06N': ['../img/products/DJ SERIES/SG06N (2).jpg', '../img/products/DJ SERIES/SG06N.jpg'],
+    'SG07N': ['../img/products/DJ SERIES/SG07N.jpg'],
+    'SG08N': ['../img/products/DJ SERIES/SG08N..jpg', '../img/products/DJ SERIES/SG08N.jpg'],
+    'SG09N': ['../img/products/DJ SERIES/SG09N.jpg'],
+    'SG12N': ['../img/products/DJ SERIES/SG12N.jpg'],
+    'SG13N': ['../img/products/DJ SERIES/SG13N.jpg'],
+    'SG14N': ['../img/products/DJ SERIES/SG14N.jpg'],
+    'SG15N': ['../img/products/DJ SERIES/SG15N.jpg'],
+    'SG16N': ['../img/products/DJ SERIES/SG16N.jpg'],
+    'SG17N': ['../img/products/DJ SERIES/SG17N..jpg', '../img/products/DJ SERIES/SG17N.jpg'],
+    'SG21N': ['../img/products/DJ SERIES/SG21N.jpg'],
+    'SG22N': ['../img/products/DJ SERIES/SG22N (2).jpg', '../img/products/DJ SERIES/SG22N.jpg'],
+    'SG23N': ['../img/products/DJ SERIES/SG23N (2).jpg', '../img/products/DJ SERIES/SG23N.jpg'],
+    'SG25N': ['../img/products/DJ SERIES/SG25N.jpg'],
+    'EX10B': ['../img/products/EXTENDER SERIES/EX10B.jpg', '../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'EX10XB': ['../img/products/EXTENDER SERIES/EX10XB.jpg', '../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'EX15B': ['../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'EX20B': ['../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'EX25B': ['../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'EX30B': ['../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'EX30XB': ['../img/products/EXTENDER SERIES/Extender.jpeg'],
+    'IF10LAZT': ['../img/products/IRONFLEX SERIES/IF10LAZT.jpg'],
+    'IF10LB': ['../img/products/IRONFLEX SERIES/IF10LB.jpg'],
+    'IF10LLA': ['../img/products/IRONFLEX SERIES/IF10LLA.jpg'],
+    'IF10LRO': ['../img/products/IRONFLEX SERIES/IF10LRO.jpg'],
+    'IF10LRX': ['../img/products/IRONFLEX SERIES/IF10LRX.jpg'],
+    'IF10LTX': ['../img/products/IRONFLEX SERIES/IF10LTX..jpg', '../img/products/IRONFLEX SERIES/IF10LTX.jpg'],
+    'IF10LVD': ['../img/products/IRONFLEX SERIES/IF10LVD.jpg'],
+    'IF10LVM': ['../img/products/IRONFLEX SERIES/IF10LVM.jpg'],
+    'KBD07B': ['../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'],
+    'KBD10B': ['../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'],
+    'KBD15B': ['../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'],
+    'KBD20B': ['../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'],
+    'KBD25B': ['../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'],
+    'KBD30B': ['../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'],
+    'KL10LB': ['../img/products/KING SERIES/KL10LB (2).jpg', '../img/products/KING SERIES/KL10LB.jpg'],
+    'PIM15B': ['../img/products/PEDAL SERIES/PIM15B...jpg', '../img/products/PEDAL SERIES/PIM15B..jpg', '../img/products/PEDAL SERIES/PIM15B.jpg'],
+    'PIM15LTX': ['../img/products/PEDAL SERIES/PIM15LTX.jpg'],
+    'PIM25B': ['../img/products/PEDAL SERIES/PIM25B,.jpg', '../img/products/PEDAL SERIES/PIM25B...........jpg', '../img/products/PEDAL SERIES/PIM25B.......jpg', '../img/products/PEDAL SERIES/PIM25B.....jpg', '../img/products/PEDAL SERIES/PIM25B....jpg', '../img/products/PEDAL SERIES/PIM25B...jpg', '../img/products/PEDAL SERIES/PIM25B..jpg', '../img/products/PEDAL SERIES/PIM25B.jpg'],
+    'PIM45B': ['../img/products/PEDAL SERIES/PIM45B,.jpg', '../img/products/PEDAL SERIES/PIM45B.jpg'],
+    'P10MST': ['../img/products/PLUGS/P10 MACHO/P10MST.jpg'],
+    'JJ10S': ['../img/products/PLUGS/PLUGS DE PAINEL/JJ10S (2).jpg', '../img/products/PLUGS/PLUGS DE PAINEL/JJ10S.jpg'],
+    'PCFPP': ['../img/products/PLUGS/PLUGS DE PAINEL/PCFPP (2).jpg', '../img/products/PLUGS/PLUGS DE PAINEL/PCFPP.jpg'],
+    'PCPM': ['../img/products/PLUGS/PLUGS DE PAINEL/PCPM (2).jpg', '../img/products/PLUGS/PLUGS DE PAINEL/PCPM (3).jpg', '../img/products/PLUGS/PLUGS DE PAINEL/PCPM.jpg'],
+    'PP2FM': ['../img/products/PLUGS/PLUGS P2/PP2FM (2).jpg', '../img/products/PLUGS/PLUGS P2/PP2FM.jpg'],
+    'PP2MC': ['../img/products/PLUGS/PLUGS P2/PP2MC (2).jpg', '../img/products/PLUGS/PLUGS P2/PP2MC.jpg'],
+    'PRCA': ['../img/products/PLUGS/RCA/PLUGS RCA (2).jpg', '../img/products/PLUGS/RCA/PLUGS RCA.jpg'],
+    'PRCA6P': ['../img/products/PLUGS/RCA/PRCA6P (2).jpg', '../img/products/PLUGS/RCA/PRCA6P.jpg'],
+    'PRCA6V': ['../img/products/PLUGS/RCA/PRCA6V (2).jpg', '../img/products/PLUGS/RCA/PRCA6V.jpg'],
+    'PXFC': ['../img/products/PLUGS/XLR/PXFC (2).jpg', '../img/products/PLUGS/XLR/PXFC.jpg'],
+    'PXLJF': ['../img/products/PLUGS/XLR/PXLJF (2).jpg', '../img/products/PLUGS/XLR/PXLJF.jpg'],
+    'PXLJM': ['../img/products/PLUGS/XLR/PXLJM (2).jpg', '../img/products/PLUGS/XLR/PXLJM.jpg'],
+    'PXMC': ['../img/products/PLUGS/XLR/PXMC (2).jpg', '../img/products/PLUGS/XLR/PXMC.jpg'],
+    'SSC103': ['../img/products/SPEAKER SERIES/SSC103.jpg'],
+    'ESP30LAZ': ['../img/products/VINTAGE SERIES/ESP30LAZ.jpg'],
+    'ESP30LAZB': ['../img/products/VINTAGE SERIES/ESP30LAZB..jpg', '../img/products/VINTAGE SERIES/ESP30LAZB.jpg'],
+    'ESP30LAZE': ['../img/products/VINTAGE SERIES/ESP30LAZE.jpg'],
+    'ESP30LAZP': ['../img/products/VINTAGE SERIES/ESP30LAZP.jpg'],
+    'ESP30LAZT': ['../img/products/VINTAGE SERIES/ESP30LAZT.jpg'],
+    'ESP30LB': ['../img/products/VINTAGE SERIES/ESP30LB.jpg'],
+    'ESP30LBG': ['../img/products/VINTAGE SERIES/ESP30LBG.jpg'],
+    'ESP30LPT': ['../img/products/VINTAGE SERIES/ESP30LPT.jpg'],
+    'ESP30LRX': ['../img/products/VINTAGE SERIES/ESP30LRX (2).jpg', '../img/products/VINTAGE SERIES/ESP30LRX..jpg', '../img/products/VINTAGE SERIES/ESP30LRX.jpg'],
+    'ESP30LVM': ['../img/products/VINTAGE SERIES/ESP30LVM (2).jpg', '../img/products/VINTAGE SERIES/ESP30LVM..jpg', '../img/products/VINTAGE SERIES/ESP30LVM.jpg']
 };
 
 const lineImageMap = {
@@ -249,7 +441,123 @@ const lineImageMap = {
     'Pedal Series': '../img/products/PEDAL SERIES/PIM15B.jpg',
     'Speaker': '../img/products/SPEAKER SERIES/SSC103.jpg',
     'Extender': '../img/products/EXTENDER SERIES/Extender.jpeg',
-    'DJ Series': '../img/products/DJ SERIES/SG01N.jpg'
+    'DJ Series': '../img/products/DJ SERIES/SG01N.jpg',
+    'Conectores Diversos': '../img/products/PLUGS/P10 MACHO/P10MST.jpg',
+    'Fio Multicanal': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg',
+    'Fios Diversos': '../img/products/CABOS EM METRO/FIO INSTRUMENTO/FI030BE.jpg'
+};
+
+const lineImagesMap = {
+    'Classic': [
+        '../img/products/CLASSIC SERIES/IC10B.jpg',
+        '../img/products/CLASSIC SERIES/MC03XB.jpg',
+        '../img/products/CLASSIC SERIES/MC10PB.jpg',
+        '../img/products/CLASSIC SERIES/MC10XB.jpg'
+    ],
+    'Cacau Santos Signature': [
+        '../img/products/CACAU SANTOS/CS10LB.jpeg',
+        '../img/products/CACAU SANTOS/CS10LB pacote.png',
+        '../img/products/CACAU SANTOS/CS10LB lançamento.jpeg',
+        '../img/products/CACAU SANTOS/CS15LB.jpeg'
+    ],
+    'Iron Flex': [
+        '../img/products/IRONFLEX SERIES/IF10LB.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LTX.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LAZT.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LRO.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LRX.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LLA.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LVD.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LVM.jpg'
+    ],
+    'Iron Flex Textil': [
+        '../img/products/IRONFLEX SERIES/IF10LTX.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LTX..jpg'
+    ],
+    'Iron Flex Tarja': [
+        '../img/products/IRONFLEX SERIES/IF10LAZT.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LRO.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LRX.jpg',
+        '../img/products/IRONFLEX SERIES/IF10LLA.jpg'
+    ],
+    'Vintage Espiral': [
+        '../img/products/VINTAGE SERIES/ESP30LB.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LBG.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LAZ.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LAZB.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LAZE.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LAZP.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LAZT.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LPT.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LRX.jpg',
+        '../img/products/VINTAGE SERIES/ESP30LVM.jpg'
+    ],
+    'Acoustic': [
+        '../img/products/ACOUSTIC SERIES/AS10LB.jpg',
+        '../img/products/ACOUSTIC SERIES/AS10LTX.jpg'
+    ],
+    'Keyboard': [
+        '../img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg'
+    ],
+    'King Line': [
+        '../img/products/KING SERIES/KL10LB.jpg',
+        '../img/products/KING SERIES/KL10LB (2).jpg'
+    ],
+    'Bass Jumbo': [
+        '../img/products/BASS JUMBO/KING BASS JUMBO.jpg',
+        '../img/products/BASS JUMBO/King Bass Jumbo.jpeg'
+    ],
+    'Pedal Series': [
+        '../img/products/PEDAL SERIES/PIM15B.jpg',
+        '../img/products/PEDAL SERIES/PIM25B.jpg',
+        '../img/products/PEDAL SERIES/PIM45B.jpg',
+        '../img/products/PEDAL SERIES/PIM15LTX.jpg'
+    ],
+    'Speaker': [
+        '../img/products/SPEAKER SERIES/SSC103.jpg'
+    ],
+    'Extender': [
+        '../img/products/EXTENDER SERIES/Extender.jpeg',
+        '../img/products/EXTENDER SERIES/EX10B.jpg',
+        '../img/products/EXTENDER SERIES/EX10XB.jpg'
+    ],
+    'DJ Series': [
+        '../img/products/DJ SERIES/SG01N.jpg',
+        '../img/products/DJ SERIES/SG02N.jpg',
+        '../img/products/DJ SERIES/SG04N.jpg',
+        '../img/products/DJ SERIES/SG05N.jpg',
+        '../img/products/DJ SERIES/SG06N.jpg',
+        '../img/products/DJ SERIES/SG07N.jpg',
+        '../img/products/DJ SERIES/SG08N.jpg',
+        '../img/products/DJ SERIES/SG09N.jpg',
+        '../img/products/DJ SERIES/SG12N.jpg',
+        '../img/products/DJ SERIES/SG13N.jpg',
+        '../img/products/DJ SERIES/SG14N.jpg',
+        '../img/products/DJ SERIES/SG15N.jpg',
+        '../img/products/DJ SERIES/SG16N.jpg',
+        '../img/products/DJ SERIES/SG17N.jpg',
+        '../img/products/DJ SERIES/SG21N.jpg',
+        '../img/products/DJ SERIES/SG22N.jpg',
+        '../img/products/DJ SERIES/SG23N.jpg',
+        '../img/products/DJ SERIES/SG25N.jpg'
+    ],
+    'Conectores Diversos': [
+        '../img/products/PLUGS/P10 MACHO/P10MST.jpg',
+        '../img/products/PLUGS/XLR/PXMC.jpg',
+        '../img/products/PLUGS/XLR/PXFC.jpg',
+        '../img/products/PLUGS/RCA/PRCA6V.jpg',
+        '../img/products/PLUGS/PLUGS P2/PP2MC.jpg',
+        '../img/products/PLUGS/PLUGS DE PAINEL/PCPM.jpg'
+    ],
+    'Fio Multicanal': [
+        '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg',
+        '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg'
+    ],
+    'Fios Diversos': [
+        '../img/products/CABOS EM METRO/FIO INSTRUMENTO/FI030BE.jpg',
+        '../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG',
+        '../img/products/CABOS EM METRO/FIO DE MICROFONE/FM030BF+T.jpg'
+    ]
 };
 
 /**
@@ -257,6 +565,14 @@ const lineImageMap = {
  */
 function getProductImageUrl(product) {
     if (!product) return '';
+    const imagesArr = productImagesMap[product.code];
+    if (Array.isArray(imagesArr) && imagesArr.length > 0) {
+        return encodeURI(imagesArr[0]);
+    }
+    const lineImagesArr = lineImagesMap[product.line];
+    if (Array.isArray(lineImagesArr) && lineImagesArr.length > 0) {
+        return encodeURI(lineImagesArr[0]);
+    }
     const imagePath = productImageMap[product.code] || lineImageMap[product.line];
     if (imagePath) {
         return encodeURI(imagePath);
@@ -297,10 +613,24 @@ function getProductImageUrl(product) {
         <rect x="140" y="30" width="120" height="22" fill="${accent}" opacity="0.2" rx="11"/>
         <text x="200" y="45" font-family="Oswald, sans-serif" font-size="12" font-weight="bold" fill="${accent}" text-anchor="middle" letter-spacing="1.5">${title}</text>
         <text x="200" y="210" font-family="Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">${product.code}</text>
-        <text x="200" y="230" font-family="Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">${sub} • ${colorTag}</text>
+        <text x="200" y="230" font-family="Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">${sub} �?� ${colorTag}</text>
     </svg>`;
 
     return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
+
+/**
+ * Returns an array of image URLs for a product. Falls back to single image or generated SVG.
+ */
+function getProductImages(product) {
+    if (!product) return [];
+    const imagesArr = productImagesMap[product.code];
+    if (Array.isArray(imagesArr) && imagesArr.length > 0) return imagesArr.map(p => encodeURI(p));
+    const lineImagesArr = lineImagesMap[product.line];
+    if (Array.isArray(lineImagesArr) && lineImagesArr.length > 0) return lineImagesArr.map(p => encodeURI(p));
+    const single = productImageMap[product.code] || lineImageMap[product.line];
+    if (single) return [encodeURI(single)];
+    return [getProductImageUrl(product)];
 }
 
 /**
@@ -329,3 +659,4 @@ function getRelatedProducts(product, limit = 3) {
     const others = products.filter(p => p.code !== product.code && !sameLine.includes(p));
     return [...sameLine, ...others].slice(0, limit);
 }
+

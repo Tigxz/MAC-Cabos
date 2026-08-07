@@ -359,6 +359,24 @@ html.light-theme .objetivo-card {
     border-color: #e5e7eb;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
+html.light-theme .desconto-card {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+html.light-theme .desconto-card:hover {
+    border-color: #0094c8;
+    box-shadow: 0 16px 36px rgba(0, 148, 200, 0.12);
+}
+html.light-theme .desconto-badge {
+    background: rgba(0, 148, 200, 0.1);
+    color: #0094c8;
+    border-color: rgba(0, 148, 200, 0.2);
+}
+html.light-theme .badge-destaque {
+    background: #0094c8;
+    color: #ffffff;
+}
 
 /* Product individual page */
 html.light-theme .main-image {
@@ -381,6 +399,62 @@ html.light-theme .spec-box select#variant-select {
     border-color: #d1d5db;
     color: #111827;
 }
+
+/* Thumbnails under the main product image: fixed square cards to keep consistent height */
+.thumb-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.thumb-item {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    cursor: pointer;
+}
+.thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.thumb-item.active {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+    border-color: var(--primary-cyan);
+}
+
+/* Responsive: reduce thumb size on small screens */
+@media (max-width: 1024px) {
+    .thumb-item { width: 120px; height: 120px; }
+}
+@media (max-width: 640px) {
+    .thumb-item { width: 88px; height: 88px; }
+}
+
+/* Product badges (lançamento, pacote) */
+.product-badges {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.product-badges .badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-white);
+}
+.product-badges .badge-launch { background: linear-gradient(90deg,#ff7a00,#ffb703); }
+.product-badges .badge-pack { background: linear-gradient(90deg,#06b6d4,#0ea5b7); }
 html.light-theme .spec-box select#variant-select option {
     background: #ffffff;
     color: #111827;
@@ -1641,6 +1715,108 @@ textarea.form-control { resize: vertical; min-height: 120px; }
     margin-bottom: 12px;
 }
 
+/* --- ESTILOS POLÍTICA DE DESCONTO --- */
+.desconto-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.desconto-container h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.desconto-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.desconto-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.desconto-card:nth-child(1) { animation-delay: 0.1s; }
+.desconto-card:nth-child(2) { animation-delay: 0.2s; }
+.desconto-card:nth-child(3) { animation-delay: 0.3s; }
+.desconto-card:nth-child(4) { animation-delay: 0.4s; }
+.desconto-card:nth-child(5) { animation-delay: 0.5s; }
+
+.desconto-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-cyan);
+    box-shadow: 0 16px 40px rgba(0, 180, 235, 0.15);
+}
+
+.desconto-badge {
+    min-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(0, 180, 235, 0.1);
+    border: 2px solid var(--primary-cyan);
+    color: var(--primary-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.badge-destaque {
+    background: var(--primary-cyan);
+    color: #000;
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 20px rgba(0, 180, 235, 0.4);
+}
+
+.desconto-info {
+    flex: 1;
+}
+
+.desconto-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.desconto-info p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 650px) {
+    .desconto-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 24px;
+    }
+    .desconto-badge {
+        min-width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+}
+
 /* ==========================================================================
    9. PÁGINA PRODUTO INDIVIDUAL
    ========================================================================== */
@@ -1659,6 +1835,8 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .product-media, .product-info { flex: 1; }
 
 .main-image {
+    position: relative;
+    overflow: hidden;
     background-color: #000;
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -1668,7 +1846,40 @@ textarea.form-control { resize: vertical; min-height: 120px; }
     margin-bottom: 15px;
 }
 
-.main-image img { max-width: 100%; height: auto; }
+.main-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.25s ease;
+    cursor: crosshair;
+}
+
+.main-image:hover img {
+    transform: scale(1.02);
+}
+
+.magnifier-lens {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.15s ease;
+}
+
+.magnifier-lens.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.magnifier-lens:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+}
 
 .thumb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .thumb-item {

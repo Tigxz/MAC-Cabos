@@ -144,7 +144,8 @@ html.light-theme .card:hover {
     box-shadow: 0 12px 32px rgba(0, 148, 200, 0.12);
 }
 html.light-theme .card::before {
-    background: radial-gradient(circle, rgba(0, 148, 200, 0.08) 0%, rgba(0,0,0,0) 70%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.45) 60%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
 }
 
 /* Product cards */
@@ -2282,7 +2283,7 @@ footer {
 .card {
     background-color: var(--card-bg);
     border: 1px solid #1f2937;
-    padding: 30px 20px;
+    padding: 0 0 30px 0;
     border-radius: 5px;
     text-align: left;
     position: relative;
@@ -2301,26 +2302,27 @@ footer {
     box-shadow: 0 18px 40px rgba(0, 180, 235, 0.12);
 }
 
-/* Efeito de brilho azul no topo do card */
+/* Efeito de fusão na base da imagem (fade da cor do card de baixo para cima, fundindo com o conteúdo) */
 .card::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(0, 180, 235, 0.15) 0%, rgba(0,0,0,0) 70%);
-    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(0deg, rgba(11, 17, 26, 1) 0%, rgba(11, 17, 26, 0.85) 30%, rgba(11, 17, 26, 0.45) 60%, rgba(11, 17, 26, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
 }
 
 .card img {
     width: 100%;
-    height: 200px;
-    object-fit: contain;
+    height: 220px;
+    object-fit: cover;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    display: block;
 }
 
 .card h3 {
@@ -2328,7 +2330,8 @@ footer {
     font-size: 24px;
     margin-bottom: 15px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    padding: 0 20px;
 }
 
 .card p {
@@ -2336,7 +2339,8 @@ footer {
     font-size: 12px;
     margin-bottom: 10px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    padding: 0 20px;
 }
 
 .card .link-categoria {
@@ -2347,7 +2351,8 @@ footer {
     display: inline-block;
     margin-top: 15px;
     position: relative;
-    z-index: 1;
+    z-index: 3;
+    padding: 0 20px;
 }
 
 /* --- COMUNIDADE / CTA SECTION --- */

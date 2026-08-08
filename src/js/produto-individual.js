@@ -1,5 +1,7 @@
 // produto-individual.js - Lógica de exibição dinâmica do produto selecionado
 
+let currentProduct = null;
+
 // derive family key from code
 const familyKey = (product) => {
     if (!product) return '';
@@ -38,6 +40,7 @@ function renderRelated(product) {
 
 function updateProductDisplay(product, variants=[]) {
     if (!product) return;
+    currentProduct = product;
     document.title = `MAC Cabos - ${product.name}`;
     const titleEl = document.getElementById('product-title');
     const skuEl = document.getElementById('product-sku');
@@ -94,11 +97,19 @@ function updateProductDisplay(product, variants=[]) {
             lengthField = `<select id="variant-select">${options}</select>`;
         }
 
+        // Determine initial color from the first image when a color map exists for this product
+        let displayColor = product.color;
+        if (typeof getProductImageColor === 'function') {
+            const firstImage = getProductImageUrl(product);
+            const imgColor = getProductImageColor(product, firstImage);
+            if (imgColor) displayColor = imgColor;
+        }
+
         specsContainer.innerHTML = `
             <div class="spec-box"><span>Linha:</span><p>${product.line}</p></div>
             <div class="spec-box"><span>Comprimento:</span>${lengthField}</div>
             <div class="spec-box"><span>Conector:</span><p>${product.connector}</p></div>
-            <div class="spec-box"><span>Cor / Acabamento:</span><p>${product.color}</p></div>
+            <div class="spec-box"><span>Cor / Acabamento:</span><p>${displayColor}</p></div>
             <div class="spec-box"><span>Tipo / Sinal:</span><p>${product.subtype}</p></div>
             <div class="spec-box"><span>Preço de Tabela:</span><p style="color: var(--primary-cyan); font-weight: bold;">${product.price}</p></div>
             <div class="spec-box"><span>Blindagem:</span><p>Dupla Cobre Oferecendo Som Limpo</p></div>
@@ -140,6 +151,21 @@ function changeMainImage(src, element) {
     }
     document.querySelectorAll('.thumb-item').forEach(item => item.classList.remove('active'));
     if (element) element.classList.add('active');
+
+    // Update the color spec dynamically when the image changes to a colored variant
+    if (currentProduct && typeof getProductImageColor === 'function') {
+        const color = getProductImageColor(currentProduct, src);
+        if (color) {
+            const specBoxes = document.querySelectorAll('#specs-grid .spec-box');
+            specBoxes.forEach(box => {
+                const span = box.querySelector('span');
+                if (span && span.textContent.includes('Cor')) {
+                    const p = box.querySelector('p');
+                    if (p) p.textContent = color;
+                }
+            });
+        }
+    }
 }
 
 function setupMagnifier(image, lens, zoom = 2.5) {

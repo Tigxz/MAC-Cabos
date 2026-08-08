@@ -1,6 +1,7 @@
 const products = [
-    // Linha Classic Mono
-    { code: 'MONOIC03B', name: 'Cabo Instrumento 03FT (0.91M) P10 + P10 Classic', line: 'Classic', subtype: 'Mono', length: '03FT (0.91M)', connector: 'P10 + P10', price: 'R$ 18.98', color: 'Preto' },
+    // ===== LINHA CLASSIC =====
+    // Linha Classic Mono (Instrumento P10)
+    { code: 'IC03B', name: 'Cabo Instrumento 03FT (0.91M) P10 + P10 Classic', line: 'Classic', subtype: 'Mono', length: '03FT (0.91M)', connector: 'P10 + P10', price: 'R$ 18.98', color: 'Preto' },
     { code: 'IC10B', name: 'Cabo Instrumento 10FT (3.05M) P10 + P10 Classic', line: 'Classic', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 29.44', color: 'Preto' },
     { code: 'IC15B', name: 'Cabo Instrumento 15FT (4.57M) P10 + P10 Classic', line: 'Classic', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 36.03', color: 'Preto' },
     { code: 'IC20B', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 Classic', line: 'Classic', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 47.81', color: 'Preto' },
@@ -11,7 +12,7 @@ const products = [
     { code: 'IC20LB', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 90° Classic', line: 'Classic', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 47.81', color: 'Preto' },
     { code: 'IC25LB', name: 'Cabo Instrumento 25FT (7.62M) P10 + P10 90° Classic', line: 'Classic', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 52.37', color: 'Preto' },
     { code: 'IC30LB', name: 'Cabo Instrumento 30FT (9.15M) P10 + P10 90° Classic', line: 'Classic', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 60.06', color: 'Preto' },
-    // Linha Classic Estéreo
+    // Linha Classic Estéreo (Áudio XLR/P10/Stereo)
     { code: 'MC03PB', name: 'Cabo Desbalanceado 03FT (0.91M) - XLR + P10 Classic Series', line: 'Classic', subtype: 'Estéreo', length: '03FT (0.91M)', connector: 'XLR + P10', price: 'R$ 27.60', color: 'Preto' },
     { code: 'MC10PB', name: 'Cabo Desbalanceado 10FT (3.05M) - XLR + P10 Classic Series', line: 'Classic', subtype: 'Estéreo', length: '10FT (3.05M)', connector: 'XLR + P10', price: 'R$ 33.90', color: 'Preto' },
     { code: 'MC15PB', name: 'Cabo Desbalanceado 15FT (4.57M) - XLR + P10 Classic Series', line: 'Classic', subtype: 'Estéreo', length: '15FT (4.57M)', connector: 'XLR + P10', price: 'R$ 40.20', color: 'Preto' },
@@ -24,10 +25,13 @@ const products = [
     { code: 'MC20XB', name: 'Cabo Balanceado 20FT (6.10M) - XLR + XLR Classic Series', line: 'Classic', subtype: 'Estéreo', length: '20FT (6.10M)', connector: 'XLR + XLR', price: 'R$ 54.20', color: 'Preto' },
     { code: 'MC25XB', name: 'Cabo Balanceado 25FT (7.62M) - XLR + XLR Classic Series', line: 'Classic', subtype: 'Estéreo', length: '25FT (7.62M)', connector: 'XLR + XLR', price: 'R$ 61.87', color: 'Preto' },
     { code: 'MC30XB', name: 'Cabo Balanceado 30FT (9.15M) - XLR + XLR Classic Series', line: 'Classic', subtype: 'Estéreo', length: '30FT (9.15M)', connector: 'XLR + XLR', price: 'R$ 70.20', color: 'Preto' },
-    // Linha Cacau Santos Signature
+
+    // ===== LINHA CACAU SANTOS SIGNATURE =====
     { code: 'CS10LB', name: 'Cabo Instrumento Cacau Santos Signature 10FT/3,05mts Reto/90º', line: 'Cacau Santos Signature', subtype: 'Instrumento', length: '10FT (3.05M)', connector: 'P10 + P10 / 90°', price: 'R$ 91.50', color: 'Preto' },
     { code: 'CS15LB', name: 'Cabo Instrumento Cacau Santos Signature 15FT/4,57mts Reto/90º', line: 'Cacau Santos Signature', subtype: 'Instrumento', length: '15FT (4.57M)', connector: 'P10 + P10 / 90°', price: 'R$ 75.53', color: 'Preto' },
-    // Linha Iron Flex Mono
+
+    // ===== LINHA IRON FLEX =====
+    // Iron Flex Emborrachado
     { code: 'IF10B', name: 'Cabo Instrumento 10FT (3.05M) P10 + P10 Ironflex Series', line: 'Iron Flex', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 39.76', color: 'Preto' },
     { code: 'IF15B', name: 'Cabo Instrumento 15FT (4.57M) P10 + P10 Ironflex Series', line: 'Iron Flex', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 53.52', color: 'Preto' },
     { code: 'IF20B', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 Ironflex Series', line: 'Iron Flex', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Preto' },
@@ -38,7 +42,7 @@ const products = [
     { code: 'IF20LB', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 90° Ironflex Series', line: 'Iron Flex', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Preto' },
     { code: 'IF25LB', name: 'Cabo Instrumento 25FT (7.62M) P10 + P10 90° Ironflex Series', line: 'Iron Flex', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.79', color: 'Preto' },
     { code: 'IF30LB', name: 'Cabo Instrumento 30FT (9.15M) P10 + P10 90° Ironflex Series', line: 'Iron Flex', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Preto' },
-    // Linha Iron Flex Textil
+    // Iron Flex Têxtil
     { code: 'IF10TX', name: 'Cabo Instrumento 10FT (3.05M) P10 + P10 Ironflex Series Textil', line: 'Iron Flex Textil', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 48.62', color: 'Textil' },
     { code: 'IF15TX', name: 'Cabo Instrumento 15FT (4.57M) P10 + P10 Ironflex Series Textil', line: 'Iron Flex Textil', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 64.22', color: 'Textil' },
     { code: 'IF20TX', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 Ironflex Series Textil', line: 'Iron Flex Textil', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 78.88', color: 'Textil' },
@@ -49,20 +53,82 @@ const products = [
     { code: 'IF20LTX', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 90° Ironflex Series Textil', line: 'Iron Flex Textil', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 78.88', color: 'Textil' },
     { code: 'IF25LTX', name: 'Cabo Instrumento 25FT (7.62M) P10 + P10 90° Ironflex Series Textil', line: 'Iron Flex Textil', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 91.41', color: 'Textil' },
     { code: 'IF30LTX', name: 'Cabo Instrumento 30FT (9.15M) P10 + P10 90° Ironflex Series Textil', line: 'Iron Flex Textil', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 107.04', color: 'Textil' },
-    // Linha Iron Flex Tarja (Coloridos)
+    // Iron Flex Tarja Retos
     { code: 'IF10AZT', name: 'Cabo Instrumento 10FT P10 + P10 Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 39.76', color: 'Azul Turquesa' },
-    { code: 'IF15RO', name: 'Cabo Instrumento 15FT P10 + P10 Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 53.52', color: 'Vermelho' },
-    { code: 'IF20LA', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Laranja' },
-    { code: 'IF25VM', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Verde' },
-    { code: 'IF30RX', name: 'Cabo Instrumento 30FT P10 + P10 Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10', price: 'R$ 91.74', color: 'Roxo' },
+    { code: 'IF10RO', name: 'Cabo Instrumento 10FT P10 + P10 Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 39.76', color: 'Vermelho' },
+    { code: 'IF10LA', name: 'Cabo Instrumento 10FT P10 + P10 Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 39.76', color: 'Laranja' },
+    { code: 'IF10VM', name: 'Cabo Instrumento 10FT P10 + P10 Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 39.76', color: 'Verde' },
     { code: 'IF10VE', name: 'Cabo Instrumento 10FT P10 + P10 Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 39.76', color: 'Verde Escuro' },
-    // Linha Vintage Espiral
+    { code: 'IF15AZT', name: 'Cabo Instrumento 15FT P10 + P10 Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 53.52', color: 'Azul Turquesa' },
+    { code: 'IF15RO', name: 'Cabo Instrumento 15FT P10 + P10 Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 53.52', color: 'Vermelho' },
+    { code: 'IF15LA', name: 'Cabo Instrumento 15FT P10 + P10 Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 53.52', color: 'Laranja' },
+    { code: 'IF15VM', name: 'Cabo Instrumento 15FT P10 + P10 Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 53.52', color: 'Verde' },
+    { code: 'IF20AZT', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Azul Turquesa' },
+    { code: 'IF20RO', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Vermelho' },
+    { code: 'IF20LA', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Laranja' },
+    { code: 'IF20VM', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Verde' },
+    { code: 'IF20RX', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Roxo' },
+    { code: 'IF20VE', name: 'Cabo Instrumento 20FT P10 + P10 Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 70.32', color: 'Verde Escuro' },
+    { code: 'IF25AZT', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Azul Turquesa' },
+    { code: 'IF25RO', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Vermelho' },
+    { code: 'IF25LA', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Laranja' },
+    { code: 'IF25VM', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Verde' },
+    { code: 'IF25RX', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Roxo' },
+    { code: 'IF25VE', name: 'Cabo Instrumento 25FT P10 + P10 Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 78.80', color: 'Verde Escuro' },
+    { code: 'IF30AZT', name: 'Cabo Instrumento 30FT P10 + P10 Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10', price: 'R$ 91.74', color: 'Azul Turquesa' },
+    { code: 'IF30RO', name: 'Cabo Instrumento 30FT P10 + P10 Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10', price: 'R$ 91.74', color: 'Vermelho' },
+    { code: 'IF30LA', name: 'Cabo Instrumento 30FT P10 + P10 Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10', price: 'R$ 91.74', color: 'Laranja' },
+    { code: 'IF30VM', name: 'Cabo Instrumento 30FT P10 + P10 Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10', price: 'R$ 91.74', color: 'Verde' },
+    { code: 'IF30RX', name: 'Cabo Instrumento 30FT P10 + P10 Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10', price: 'R$ 91.74', color: 'Roxo' },
+    // Iron Flex Tarja 90 Graus
+    { code: 'IF10LAZT', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Azul Turquesa' },
+    { code: 'IF10LRO', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Vermelho' },
+    { code: 'IF10LLA', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Laranja' },
+    { code: 'IF10LVM', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Verde' },
+    { code: 'IF10LRX', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Roxo' },
+    { code: 'IF10LVE', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Verde Escuro' },
+    { code: 'IF15LAZT', name: 'Cabo Instrumento 15FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10 90°', price: 'R$ 53.52', color: 'Azul Turquesa' },
+    { code: 'IF15LRO', name: 'Cabo Instrumento 15FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10 90°', price: 'R$ 53.52', color: 'Vermelho' },
+    { code: 'IF15LLA', name: 'Cabo Instrumento 15FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10 90°', price: 'R$ 53.52', color: 'Laranja' },
+    { code: 'IF15LVM', name: 'Cabo Instrumento 15FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10 90°', price: 'R$ 53.52', color: 'Verde' },
+    { code: 'IF15LRX', name: 'Cabo Instrumento 15FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10 90°', price: 'R$ 53.52', color: 'Roxo' },
+    { code: 'IF20LAZT', name: 'Cabo Instrumento 20FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Azul Turquesa' },
+    { code: 'IF20LRO', name: 'Cabo Instrumento 20FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Vermelho' },
+    { code: 'IF20LLA', name: 'Cabo Instrumento 20FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Laranja' },
+    { code: 'IF20LVM', name: 'Cabo Instrumento 20FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Verde' },
+    { code: 'IF20LRX', name: 'Cabo Instrumento 20FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Roxo' },
+    { code: 'IF20LVE', name: 'Cabo Instrumento 20FT P10 + P10 90° Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 70.32', color: 'Verde Escuro' },
+    { code: 'IF25LAZT', name: 'Cabo Instrumento 25FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.80', color: 'Azul Turquesa' },
+    { code: 'IF25LRO', name: 'Cabo Instrumento 25FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.80', color: 'Vermelho' },
+    { code: 'IF25LLA', name: 'Cabo Instrumento 25FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.80', color: 'Laranja' },
+    { code: 'IF25LVM', name: 'Cabo Instrumento 25FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.80', color: 'Verde' },
+    { code: 'IF25LRX', name: 'Cabo Instrumento 25FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.80', color: 'Roxo' },
+    { code: 'IF25LVE', name: 'Cabo Instrumento 25FT P10 + P10 90° Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 78.80', color: 'Verde Escuro' },
+    { code: 'IF30LAZT', name: 'Cabo Instrumento 30FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Azul Turquesa' },
+    { code: 'IF30LRO', name: 'Cabo Instrumento 30FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Vermelho' },
+    { code: 'IF30LLA', name: 'Cabo Instrumento 30FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Laranja' },
+    { code: 'IF30LVM', name: 'Cabo Instrumento 30FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Verde' },
+    { code: 'IF30LRX', name: 'Cabo Instrumento 30FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Roxo' },
+    { code: 'IF30LVE', name: 'Cabo Instrumento 30FT P10 + P10 90° Ironflex Tarja VE', line: 'Iron Flex Tarja', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 91.74', color: 'Verde Escuro' },
+
+    // ===== LINHA VINTAGE ESPIRAL =====
     { code: 'ESP30LB', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Branco', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Branco' },
+    { code: 'ESP30LPT', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Preto Têxtil', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Preto Têxtil' },
+    { code: 'ESP30LVM', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Vermelho/Vinho', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Vermelho' },
+    { code: 'ESP30LAZE', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul Escuro', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul Escuro' },
+    { code: 'ESP30LAZB', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul/Branco', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul/Branco' },
+    { code: 'ESP30LBG', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Bege', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Bege' },
+    { code: 'ESP30LAZ', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul' },
+    { code: 'ESP30LVEC', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Verde Claro', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Verde Claro' },
+    { code: 'ESP30LC', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Cinza', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Cinza' },
+    { code: 'ESP30LAZT', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul Turquesa', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul Turquesa' },
+    { code: 'ESP30LRX', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Roxo', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Roxo' },
+    { code: 'ESP30LAZP', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul/Preto', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul/Preto' },
+    { code: 'ESP30LRXP', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Roxo/Preto', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Roxo/Preto' },
     { code: 'ESP30LR', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Vermelho', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Vermelho' },
     { code: 'ESP30LBK', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Preto', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Preto' },
-    { code: 'ESP30LAZ', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul' },
-    { code: 'ESP30LBG', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Bege', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Bege' },
-    // Linha Acústicas
+
+    // ===== LINHA ACOUSTIC =====
     { code: 'AS10B', name: 'Cabo Instrumento 10FT (3.05M) P10 + P10 Acoustic (Cor Coca)', line: 'Acoustic', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 70.51', color: 'Coca' },
     { code: 'AS15B', name: 'Cabo Instrumento 15FT (4.57M) P10 + P10 Acoustic (Cor Coca)', line: 'Acoustic', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 88.64', color: 'Coca' },
     { code: 'AS20B', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 Acoustic (Cor Coca)', line: 'Acoustic', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 106.78', color: 'Coca' },
@@ -83,26 +149,30 @@ const products = [
     { code: 'AS20LTX', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 90° Acoustic Têxtil', line: 'Acoustic', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 78.88', color: 'Textil' },
     { code: 'AS25LTX', name: 'Cabo Instrumento 25FT (7.62M) P10 + P10 90° Acoustic Têxtil', line: 'Acoustic', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 91.41', color: 'Textil' },
     { code: 'AS30LTX', name: 'Cabo Instrumento 30FT (9.15M) P10 + P10 90° Acoustic Têxtil', line: 'Acoustic', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 107.04', color: 'Textil' },
-    // Linha Keyboard
+
+    // ===== LINHA KEYBOARD =====
     { code: 'KBD07B', name: 'Cabo Instrumento 07FT (2.10M) 2P10 + 2P10 Keyboard Series', line: 'Keyboard', subtype: 'Mono', length: '07FT (2.10M)', connector: '2P10 + 2P10', price: 'R$ 117.74', color: 'Preto' },
     { code: 'KBD10B', name: 'Cabo Instrumento 10FT (3.05M) 2P10 + 2P10 Keyboard Series', line: 'Keyboard', subtype: 'Mono', length: '10FT (3.05M)', connector: '2P10 + 2P10', price: 'R$ 170.75', color: 'Preto' },
     { code: 'KBD15B', name: 'Cabo Instrumento 15FT (4.57M) 2P10 + 2P10 Keyboard Series', line: 'Keyboard', subtype: 'Mono', length: '15FT (4.57M)', connector: '2P10 + 2P10', price: 'R$ 215.57', color: 'Preto' },
     { code: 'KBD20B', name: 'Cabo Instrumento 20FT (6.10M) 2P10 + 2P10 Keyboard Series', line: 'Keyboard', subtype: 'Mono', length: '20FT (6.10M)', connector: '2P10 + 2P10', price: 'R$ 262.94', color: 'Preto' },
     { code: 'KBD25B', name: 'Cabo Instrumento 25FT (7.62M) 2P10 + 2P10 Keyboard Series', line: 'Keyboard', subtype: 'Mono', length: '25FT (7.62M)', connector: '2P10 + 2P10', price: 'R$ 310.07', color: 'Preto' },
     { code: 'KBD30B', name: 'Cabo Instrumento 30FT (9.15M) 2P10 + 2P10 Keyboard Series', line: 'Keyboard', subtype: 'Mono', length: '30FT (9.15M)', connector: '2P10 + 2P10', price: 'R$ 354.79', color: 'Preto' },
-    // Linha King Line
+
+    // ===== LINHA KING LINE =====
     { code: 'KL10LB', name: 'Cabo Instrumento 10FT (3.05M) P10 + P10 King Line (ON/OFF)', line: 'King Line', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10', price: 'R$ 129.09', color: 'Preto' },
     { code: 'KL15LB', name: 'Cabo Instrumento 15FT (4.57M) P10 + P10 King Line (ON/OFF)', line: 'King Line', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10', price: 'R$ 153.89', color: 'Preto' },
     { code: 'KL20LB', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 King Line (ON/OFF)', line: 'King Line', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10', price: 'R$ 178.72', color: 'Preto' },
     { code: 'KL25LB', name: 'Cabo Instrumento 25FT (7.62M) P10 + P10 King Line (ON/OFF)', line: 'King Line', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10', price: 'R$ 203.55', color: 'Preto' },
-    // Linha Bass Jumbo
+
+    // ===== LINHA BASS JUMBO =====
     { code: 'KBJ02LB', name: 'Cabo Instrumento 6.5FT (2.00M) P10 + P10 90° Bass Jumbo 1.50mm²', line: 'Bass Jumbo', subtype: 'Mono', length: '06.5FT (2.00M)', connector: 'P10 + P10 90°', price: 'R$ 87.98', color: 'Preto' },
     { code: 'KBJ10LB', name: 'Cabo Instrumento 10FT (3.05M) P10 + P10 90° Bass Jumbo 1.50mm²', line: 'Bass Jumbo', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 98.58', color: 'Preto' },
     { code: 'KBJ15LB', name: 'Cabo Instrumento 15FT (4.57M) P10 + P10 90° Bass Jumbo 1.50mm²', line: 'Bass Jumbo', subtype: 'Mono', length: '15FT (4.57M)', connector: 'P10 + P10 90°', price: 'R$ 142.00', color: 'Preto' },
     { code: 'KBJ20LB', name: 'Cabo Instrumento 20FT (6.10M) P10 + P10 90° Bass Jumbo 1.50mm²', line: 'Bass Jumbo', subtype: 'Mono', length: '20FT (6.10M)', connector: 'P10 + P10 90°', price: 'R$ 174.10', color: 'Preto' },
     { code: 'KBJ25LB', name: 'Cabo Instrumento 25FT (7.62M) P10 + P10 90° Bass Jumbo 1.50mm²', line: 'Bass Jumbo', subtype: 'Mono', length: '25FT (7.62M)', connector: 'P10 + P10 90°', price: 'R$ 205.95', color: 'Preto' },
     { code: 'KBJ30LB', name: 'Cabo Instrumento 30FT (9.15M) P10 + P10 90° Bass Jumbo 1.50mm²', line: 'Bass Jumbo', subtype: 'Mono', length: '30FT (9.15M)', connector: 'P10 + P10 90°', price: 'R$ 238.05', color: 'Preto' },
-    // Linha Pedal Series
+
+    // ===== LINHA PEDAL SERIES =====
     { code: 'EPR', name: 'Emenda Pedal Reto + Reto', line: 'Pedal Series', subtype: 'Pedal', length: '15CM', connector: 'P10 + P10', price: 'R$ 21.16', color: 'Preto' },
     { code: 'PIM15B', name: 'Cabo Pedal 15CM 0,30mm² 90º P10 + P10 90º', line: 'Pedal Series', subtype: 'Pedal', length: '15CM', connector: 'P10 90º + P10 90º', price: 'R$ 21.16', color: 'Preto' },
     { code: 'PIM25B', name: 'Cabo Pedal 25CM 0,30mm² P10 90º + P10 90º', line: 'Pedal Series', subtype: 'Pedal', length: '25CM', connector: 'P10 90º + P10 90º', price: 'R$ 22.66', color: 'Preto' },
@@ -110,7 +180,9 @@ const products = [
     { code: 'PIM15TX', name: 'Cabo Pedal Textil 15CM 0,30mm² P10 90º + P10 90º', line: 'Pedal Series', subtype: 'Pedal', length: '15CM', connector: 'P10 90º + P10 90º', price: 'R$ 27.20', color: 'Textil' },
     { code: 'PIM25TX', name: 'Cabo Pedal Textil 25CM 0,30mm² P10 90º + P10 90º', line: 'Pedal Series', subtype: 'Pedal', length: '25CM', connector: 'P10 90º + P10 90º', price: 'R$ 28.21', color: 'Textil' },
     { code: 'PIM45TX', name: 'Cabo Pedal Textil 45CM 0,30mm² P10 90º + P10 90º', line: 'Pedal Series', subtype: 'Pedal', length: '45CM', connector: 'P10 90º + P10 90º', price: 'R$ 29.84', color: 'Textil' },
-    // Linha Speaker
+    { code: 'PIM15LTX', name: 'Cabo Interconexão Pedal 15CM P10 90° + P10 90° Têxtil', line: 'Pedal Series', subtype: 'Pedal', length: '0.15M', connector: 'P10 90° + P10 90°', price: 'R$ 29.90', color: 'Têxtil' },
+
+    // ===== LINHA SPEAKER =====
     { code: 'PPC101', name: 'Cabo Speaker P10 + P10 - 1.0mm 03FT (0.91M)', line: 'Speaker', subtype: 'Speaker', length: '03FT (0.91M)', connector: 'P10 + P10', price: 'R$ 31.52', color: 'Preto' },
     { code: 'PPC103', name: 'Cabo Speaker P10 + P10 - 1.0mm 9.84FT (3.00M)', line: 'Speaker', subtype: 'Speaker', length: '9.84FT (3.00M)', connector: 'P10 + P10', price: 'R$ 38.05', color: 'Preto' },
     { code: 'PPC105', name: 'Cabo Speaker P10 + P10 - 1.0mm 16.40FT (5.00M)', line: 'Speaker', subtype: 'Speaker', length: '16.40FT (5.00M)', connector: 'P10 + P10', price: 'R$ 49.48', color: 'Preto' },
@@ -120,10 +192,23 @@ const products = [
     { code: 'PPC2510', name: 'Cabo Speaker P10 + P10 - 2.5mm 32.80FT/10M', line: 'Speaker', subtype: 'Speaker', length: '32.80FT/10M', connector: 'P10 + P10', price: 'R$ 141.96', color: 'Preto' },
     { code: 'PPC2515', name: 'Cabo Speaker P10 + P10 - 2.5mm 49.21FT/15M', line: 'Speaker', subtype: 'Speaker', length: '49.21FT/15M', connector: 'P10 + P10', price: 'R$ 202.81', color: 'Preto' },
     { code: 'PSC101', name: 'Cabo Speaker P10 + Speakon 1.0mm 03FT', line: 'Speaker', subtype: 'Speaker', length: '03FT', connector: 'P10 + Speakon', price: 'R$ 39.66', color: 'Preto' },
-    { code: 'PSC2515', name: 'Cabo Speaker P10 + Speakon 2.5mm 49.21FT', line: 'Speaker', subtype: 'Speaker', length: '49.21FT', connector: 'P10 + Speakon', price: 'R$ 210.60', color: 'Preto' },
+    { code: 'PSC103', name: 'Cabo Speaker P10 + Speakon 1.0mm 9.84FT (3.00M)', line: 'Speaker', subtype: 'Speaker', length: '9.84FT (3.00M)', connector: 'P10 + Speakon', price: 'R$ 48.20', color: 'Preto' },
+    { code: 'PSC105', name: 'Cabo Speaker P10 + Speakon 1.0mm 16.40FT (5.00M)', line: 'Speaker', subtype: 'Speaker', length: '16.40FT (5.00M)', connector: 'P10 + Speakon', price: 'R$ 59.80', color: 'Preto' },
+    { code: 'PSC155', name: 'Cabo Speaker P10 + Speakon 1.5mm 16.40FT (5.00M)', line: 'Speaker', subtype: 'Speaker', length: '16.40FT (5.00M)', connector: 'P10 + Speakon', price: 'R$ 70.90', color: 'Preto' },
+    { code: 'PSC1510', name: 'Cabo Speaker P10 + Speakon 1.5mm 32.80FT/10M', line: 'Speaker', subtype: 'Speaker', length: '32.80FT/10M', connector: 'P10 + Speakon', price: 'R$ 111.30', color: 'Preto' },
+    { code: 'PSC1515', name: 'Cabo Speaker P10 + Speakon 1.5mm 49.21FT/15M', line: 'Speaker', subtype: 'Speaker', length: '49.21FT/15M', connector: 'P10 + Speakon', price: 'R$ 151.70', color: 'Preto' },
+    { code: 'PSC2510', name: 'Cabo Speaker P10 + Speakon 2.5mm 32.80FT/10M', line: 'Speaker', subtype: 'Speaker', length: '32.80FT/10M', connector: 'P10 + Speakon', price: 'R$ 152.20', color: 'Preto' },
+    { code: 'PSC2515', name: 'Cabo Speaker P10 + Speakon 2.5mm 49.21FT/15M', line: 'Speaker', subtype: 'Speaker', length: '49.21FT/15M', connector: 'P10 + Speakon', price: 'R$ 210.60', color: 'Preto' },
     { code: 'SSC101', name: 'Cabo Speaker Speakon + Speakon 1.0mm 03FT', line: 'Speaker', subtype: 'Speaker', length: '03FT', connector: 'Speakon + Speakon', price: 'R$ 47.85', color: 'Preto' },
-    { code: 'SSC2515', name: 'Cabo Speaker Speakon + Speakon 2.5mm 49.21FT', line: 'Speaker', subtype: 'Speaker', length: '49.21FT', connector: 'Speakon + Speakon', price: 'R$ 219.29', color: 'Preto' },
-    // Linha Extender
+    { code: 'SSC103', name: 'Cabo Caixa Acústica 10FT (3.05M) Speakon + Speakon Speaker Series', line: 'Speaker', subtype: 'Speaker', length: '10FT (3.05M)', connector: 'Speakon + Speakon', price: 'R$ 89.90', color: 'Preto' },
+    { code: 'SSC105', name: 'Cabo Speaker Speakon + Speakon 1.0mm 16.40FT (5.00M)', line: 'Speaker', subtype: 'Speaker', length: '16.40FT (5.00M)', connector: 'Speakon + Speakon', price: 'R$ 68.20', color: 'Preto' },
+    { code: 'SSC155', name: 'Cabo Speaker Speakon + Speakon 1.5mm 16.40FT (5.00M)', line: 'Speaker', subtype: 'Speaker', length: '16.40FT (5.00M)', connector: 'Speakon + Speakon', price: 'R$ 79.30', color: 'Preto' },
+    { code: 'SSC1510', name: 'Cabo Speaker Speakon + Speakon 1.5mm 32.80FT/10M', line: 'Speaker', subtype: 'Speaker', length: '32.80FT/10M', connector: 'Speakon + Speakon', price: 'R$ 119.70', color: 'Preto' },
+    { code: 'SSC1515', name: 'Cabo Speaker Speakon + Speakon 1.5mm 49.21FT/15M', line: 'Speaker', subtype: 'Speaker', length: '49.21FT/15M', connector: 'Speakon + Speakon', price: 'R$ 160.10', color: 'Preto' },
+    { code: 'SSC2510', name: 'Cabo Speaker Speakon + Speakon 2.5mm 32.80FT/10M', line: 'Speaker', subtype: 'Speaker', length: '32.80FT/10M', connector: 'Speakon + Speakon', price: 'R$ 160.60', color: 'Preto' },
+    { code: 'SSC2515', name: 'Cabo Speaker Speakon + Speakon 2.5mm 49.21FT/15M', line: 'Speaker', subtype: 'Speaker', length: '49.21FT/15M', connector: 'Speakon + Speakon', price: 'R$ 219.29', color: 'Preto' },
+
+    // ===== LINHA EXTENDER =====
     { code: 'EX10B', name: 'Cabo Extensor de Fone 10FT/3.05M 1P10ST + 1P2 Fêmea', line: 'Extender', subtype: 'Extensor', length: '10FT (3.05M)', connector: 'P10ST + P2', price: 'R$ 51.06', color: 'Preto' },
     { code: 'EX15B', name: 'Cabo Extensor de Fone 15FT/4.57M 1P10ST + 1P2 Fêmea', line: 'Extender', subtype: 'Extensor', length: '15FT (4.57M)', connector: 'P10ST + P2', price: 'R$ 69.23', color: 'Preto' },
     { code: 'EX20B', name: 'Cabo Extensor de Fone 20FT/6.10M 1P10ST + 1P2 Fêmea', line: 'Extender', subtype: 'Extensor', length: '20FT (6.10M)', connector: 'P10ST + P2', price: 'R$ 88.07', color: 'Preto' },
@@ -135,17 +220,61 @@ const products = [
     { code: 'EX25PB', name: 'Cabo Extensor de Fone 25FT/7.62M 1P2ST + 1P2 Fêmea', line: 'Extender', subtype: 'Extensor', length: '25FT (7.62M)', connector: 'P2ST + P2', price: 'R$ 104.09', color: 'Preto' },
     { code: 'EX30PB', name: 'Cabo Extensor de Fone 30FT/9.15M 1P2ST + 1P2 Fêmea', line: 'Extender', subtype: 'Extensor', length: '30FT (9.15M)', connector: 'P2ST + P2', price: 'R$ 123.47', color: 'Preto' },
     { code: 'EX10XB', name: 'Cabo Extensor 1XLR Feminino + 1P2 Feminino', line: 'Extender', subtype: 'Extensor', length: '10FT (3.05M)', connector: 'XLR + P2', price: 'R$ 52.70', color: 'Preto' },
+    { code: 'EX15XB', name: 'Cabo Extensor 1XLR Feminino + 1P2 Feminino', line: 'Extender', subtype: 'Extensor', length: '15FT (4.57M)', connector: 'XLR + P2', price: 'R$ 70.80', color: 'Preto' },
+    { code: 'EX20XB', name: 'Cabo Extensor 1XLR Feminino + 1P2 Feminino', line: 'Extender', subtype: 'Extensor', length: '20FT (6.10M)', connector: 'XLR + P2', price: 'R$ 89.90', color: 'Preto' },
+    { code: 'EX25XB', name: 'Cabo Extensor 1XLR Feminino + 1P2 Feminino', line: 'Extender', subtype: 'Extensor', length: '25FT (7.62M)', connector: 'XLR + P2', price: 'R$ 101.40', color: 'Preto' },
     { code: 'EX30XB', name: 'Cabo Extensor 1XLR Feminino + 1P2 Feminino', line: 'Extender', subtype: 'Extensor', length: '30FT (9.15M)', connector: 'XLR + P2', price: 'R$ 116.07', color: 'Preto' },
-    // Linha DJ Series
+
+    // ===== LINHA DJ SERIES =====
     { code: 'SG01N', name: 'Cabo de Sinal 1.06M 2RCA + 2P10 Mono', line: 'DJ Series', subtype: 'Sinal', length: '1.06M', connector: '2RCA + 2P10', price: 'R$ 44.13', color: 'Preto' },
+    { code: 'SG02N', name: 'Cabo DJ Series 0.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.20M', connector: 'RCA + RCA', price: 'R$ 29.90', color: 'Preto' },
+    { code: 'SG02N/10', name: 'Cabo DJ Series 1.0M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'RCA + RCA', price: 'R$ 39.90', color: 'Preto' },
+    { code: 'SG02N/15', name: 'Cabo DJ Series 1.5M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.5M', connector: 'RCA + RCA', price: 'R$ 44.90', color: 'Preto' },
+    { code: 'SG03N', name: 'Cabo DJ Series 0.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.30M', connector: 'RCA + RCA', price: 'R$ 31.90', color: 'Preto' },
     { code: 'SG04N', name: 'Cabo de Sinal 1.52M 2RCA + 1P10ST', line: 'DJ Series', subtype: 'Sinal', length: '1.52M', connector: '2RCA + P10ST', price: 'R$ 37.27', color: 'Preto' },
+    { code: 'SG04N/10', name: 'Cabo DJ Series 1.0M - 2 RCA + P10ST', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: '2RCA + P10ST', price: 'R$ 34.90', color: 'Preto' },
+    { code: 'SG04N/15', name: 'Cabo DJ Series 1.5M - 2 RCA + P10ST', line: 'DJ Series', subtype: 'Sinal', length: '1.5M', connector: '2RCA + P10ST', price: 'R$ 39.90', color: 'Preto' },
     { code: 'SG05N', name: 'Cabo de Sinal 1.52M 1P10 Mono + 1P2ST', line: 'DJ Series', subtype: 'Sinal', length: '1.52M', connector: 'P10 + P2ST', price: 'R$ 28.00', color: 'Preto' },
+    { code: 'SG05N/10', name: 'Cabo DJ Series 1.0M - P10 + P2ST', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'P10 + P2ST', price: 'R$ 25.90', color: 'Preto' },
+    { code: 'SG05N/15', name: 'Cabo DJ Series 1.5M - P10 + P2ST', line: 'DJ Series', subtype: 'Sinal', length: '1.5M', connector: 'P10 + P2ST', price: 'R$ 29.90', color: 'Preto' },
+    { code: 'SG06N', name: 'Cabo DJ Series 0.60M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.60M', connector: 'RCA + RCA', price: 'R$ 34.90', color: 'Preto' },
+    { code: 'SG06N/10', name: 'Cabo DJ Series 1.0M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'RCA + RCA', price: 'R$ 39.90', color: 'Preto' },
+    { code: 'SG06N/15', name: 'Cabo DJ Series 1.5M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.5M', connector: 'RCA + RCA', price: 'R$ 44.90', color: 'Preto' },
+    { code: 'SG07N', name: 'Cabo DJ Series 0.70M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.70M', connector: 'RCA + RCA', price: 'R$ 36.90', color: 'Preto' },
     { code: 'SG08N', name: 'Cabo de Sinal 1.52M 1P2ST + 1P2ST', line: 'DJ Series', subtype: 'Sinal', length: '1.52M', connector: 'P2ST + P2ST', price: 'R$ 30.21', color: 'Preto' },
+    { code: 'SG08N/10', name: 'Cabo DJ Series 1.0M - P2ST + P2ST', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'P2ST + P2ST', price: 'R$ 27.90', color: 'Preto' },
+    { code: 'SG08N/15', name: 'Cabo DJ Series 1.5M - P2ST + P2ST', line: 'DJ Series', subtype: 'Sinal', length: '1.5M', connector: 'P2ST + P2ST', price: 'R$ 31.90', color: 'Preto' },
+    { code: 'SG09N', name: 'Cabo DJ Series 0.90M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.90M', connector: 'RCA + RCA', price: 'R$ 39.90', color: 'Preto' },
+    { code: 'SG09N/10', name: 'Cabo DJ Series 1.0M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'RCA + RCA', price: 'R$ 41.90', color: 'Preto' },
+    { code: 'SG09N/15', name: 'Cabo DJ Series 1.5M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.5M', connector: 'RCA + RCA', price: 'R$ 46.90', color: 'Preto' },
+    { code: 'SG10N', name: 'Cabo DJ Series 1.0M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'RCA + RCA', price: 'R$ 41.90', color: 'Preto' },
+    { code: 'SG11N', name: 'Cabo DJ Series 1.1M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.1M', connector: 'RCA + RCA', price: 'R$ 43.90', color: 'Preto' },
+    { code: 'SG12N', name: 'Cabo DJ Series 1.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.20M', connector: 'RCA + RCA', price: 'R$ 44.90', color: 'Preto' },
+    { code: 'SG13N', name: 'Cabo DJ Series 1.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.30M', connector: 'RCA + RCA', price: 'R$ 46.90', color: 'Preto' },
+    { code: 'SG14N', name: 'Cabo DJ Series 1.40M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.40M', connector: 'RCA + RCA', price: 'R$ 48.90', color: 'Preto' },
+    { code: 'SG15N', name: 'Cabo DJ Series 1.50M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.50M', connector: 'RCA + RCA', price: 'R$ 51.90', color: 'Preto' },
+    { code: 'SG16N', name: 'Cabo DJ Series 1.60M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.60M', connector: 'RCA + RCA', price: 'R$ 53.90', color: 'Preto' },
+    { code: 'SG17N', name: 'Cabo DJ Series 1.70M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.70M', connector: 'RCA + RCA', price: 'R$ 55.90', color: 'Preto' },
+    { code: 'SG18N', name: 'Cabo DJ Series 1.80M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.80M', connector: 'RCA + RCA', price: 'R$ 57.90', color: 'Preto' },
     { code: 'SG19N', name: 'Cabo XLR Macho + P10 Classic 0.91M', line: 'DJ Series', subtype: 'Sinal', length: '0.91M', connector: 'XLR + P10', price: 'R$ 27.60', color: 'Preto' },
+    { code: 'SG19N/10', name: 'Cabo XLR Macho + P10 Classic 3.05M', line: 'DJ Series', subtype: 'Sinal', length: '3.05M', connector: 'XLR + P10', price: 'R$ 38.90', color: 'Preto' },
+    { code: 'SG19N/15', name: 'Cabo XLR Macho + P10 Classic 4.57M', line: 'DJ Series', subtype: 'Sinal', length: '4.57M', connector: 'XLR + P10', price: 'R$ 45.20', color: 'Preto' },
+    { code: 'SG19N/20', name: 'Cabo XLR Macho + P10 Classic 6.10M', line: 'DJ Series', subtype: 'Sinal', length: '6.10M', connector: 'XLR + P10', price: 'R$ 54.20', color: 'Preto' },
+    { code: 'SG19N/25', name: 'Cabo XLR Macho + P10 Classic 7.62M', line: 'DJ Series', subtype: 'Sinal', length: '7.62M', connector: 'XLR + P10', price: 'R$ 61.87', color: 'Preto' },
     { code: 'SG19N/30', name: 'Cabo XLR Macho + P10 Classic 9.15M', line: 'DJ Series', subtype: 'Sinal', length: '9.15M', connector: 'XLR + P10', price: 'R$ 82.59', color: 'Preto' },
     { code: 'SG20N', name: 'Cabo XLR Macho + P10 Max 0.91M', line: 'DJ Series', subtype: 'Sinal', length: '0.91M', connector: 'XLR + P10', price: 'R$ 28.77', color: 'Preto' },
+    { code: 'SG20N/10', name: 'Cabo XLR Macho + P10 Max 3.05M', line: 'DJ Series', subtype: 'Sinal', length: '3.05M', connector: 'XLR + P10', price: 'R$ 40.10', color: 'Preto' },
+    { code: 'SG20N/15', name: 'Cabo XLR Macho + P10 Max 4.57M', line: 'DJ Series', subtype: 'Sinal', length: '4.57M', connector: 'XLR + P10', price: 'R$ 46.50', color: 'Preto' },
+    { code: 'SG20N/20', name: 'Cabo XLR Macho + P10 Max 6.10M', line: 'DJ Series', subtype: 'Sinal', length: '6.10M', connector: 'XLR + P10', price: 'R$ 55.60', color: 'Preto' },
+    { code: 'SG20N/25', name: 'Cabo XLR Macho + P10 Max 7.62M', line: 'DJ Series', subtype: 'Sinal', length: '7.62M', connector: 'XLR + P10', price: 'R$ 63.40', color: 'Preto' },
     { code: 'SG20N/30', name: 'Cabo XLR Macho + P10 Max 9.15M', line: 'DJ Series', subtype: 'Sinal', length: '9.15M', connector: 'XLR + P10', price: 'R$ 89.22', color: 'Preto' },
-    // Linha Caixa Multicanal
+    { code: 'SG21N', name: 'Cabo DJ Series 2.10M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.10M', connector: 'RCA + RCA', price: 'R$ 62.90', color: 'Preto' },
+    { code: 'SG21N/10', name: 'Cabo DJ Series 1.0M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.0M', connector: 'RCA + RCA', price: 'R$ 41.90', color: 'Preto' },
+    { code: 'SG22N', name: 'Cabo DJ Series 2.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.20M', connector: 'RCA + RCA', price: 'R$ 64.90', color: 'Preto' },
+    { code: 'SG23N', name: 'Cabo DJ Series 2.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.30M', connector: 'RCA + RCA', price: 'R$ 66.90', color: 'Preto' },
+    { code: 'SG25N', name: 'Cabo DJ Series 2.50M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.50M', connector: 'RCA + RCA', price: 'R$ 69.90', color: 'Preto' },
+
+    // ===== LINHA CAIXA MULTICANAL =====
     { code: 'CM08', name: 'Caixa Multicanal 08 Vias', line: 'Caixa Multicanal', subtype: 'Medusa', length: '-', connector: '-', price: 'R$ 60.54', color: 'Azul' },
     { code: 'CM12', name: 'Caixa Multicanal 12 Vias', line: 'Caixa Multicanal', subtype: 'Medusa', length: '-', connector: '-', price: 'R$ 75.65', color: 'Azul' },
     { code: 'CM16', name: 'Caixa Multicanal 16 Vias', line: 'Caixa Multicanal', subtype: 'Medusa', length: '-', connector: '-', price: 'R$ 83.27', color: 'Azul' },
@@ -155,86 +284,95 @@ const products = [
     { code: 'CM48', name: 'Caixa Multicanal 48 Vias', line: 'Caixa Multicanal', subtype: 'Medusa', length: '-', connector: '-', price: 'R$ 136.43', color: 'Azul' },
     { code: 'CM56', name: 'Caixa Multicanal 56 Vias', line: 'Caixa Multicanal', subtype: 'Medusa', length: '-', connector: '-', price: 'R$ 155.87', color: 'Azul' },
     { code: 'CM64', name: 'Caixa Multicanal 64 Vias', line: 'Caixa Multicanal', subtype: 'Medusa', length: '-', connector: '-', price: 'R$ 164.15', color: 'Azul' },
-    // Linha Fio Multicanal
+
+    // ===== LINHA FIO MULTICANAL =====
+    { code: 'FMC04', name: 'Multicabo de reposição 4 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 9.50', color: 'Azul' },
+    { code: 'FMC06', name: 'Multicabo de reposição 6 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 13.10', color: 'Azul' },
+    { code: 'FMC08', name: 'Multicabo de reposição 8 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 16.80', color: 'Azul' },
+    { code: 'FMC12', name: 'Multicabo de reposição 12 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 24.50', color: 'Azul' },
+    { code: 'FMC16', name: 'Multicabo de reposição 16 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 31.20', color: 'Azul' },
+    { code: 'FMC20', name: 'Fio Multicanal Medusa 20 Vias por Metro', line: 'Fio Multicanal', subtype: 'Multicanal', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 38.00/m', color: 'Preto' },
+    { code: 'FMC20P', name: 'Fio Multicanal Medusa 20 Vias com Proteção por Metro', line: 'Fio Multicanal', subtype: 'Multicanal', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 42.00/m', color: 'Preto' },
     { code: 'MEDS6', name: 'Multicabo de reposição 6 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 13.10', color: 'Azul' },
     { code: 'MEDS48', name: 'Multicabo de reposição 48 vias', line: 'Fio Multicanal', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 83.85', color: 'Azul' },
-    // Linha Fios Diversos
+
+    // ===== LINHA FIOS DIVERSOS =====
     { code: 'FK075', name: 'Mono 1x0.75mm² King Line', line: 'Fios Diversos', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 8.58', color: 'Preto' },
     { code: 'FI020C', name: 'Mono 1x0.20mm² Classic', line: 'Fios Diversos', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 2.63', color: 'Preto' },
     { code: 'FI030MP', name: 'Mono 1x0.30mm² Max', line: 'Fios Diversos', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 3.68', color: 'Preto' },
     { code: 'FM030MT', name: 'Estéreo 2x0.30mm² Max Trançado', line: 'Fios Diversos', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 4.90', color: 'Preto' },
     { code: 'FSP100', name: 'Fio de Speaker 1mm²', line: 'Fios Diversos', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 4.08', color: 'Preto' },
     { code: 'FSP250', name: 'Fio de Speaker 2.5mm²', line: 'Fios Diversos', subtype: 'Fio', length: 'Metro', connector: 'Sem conector', price: 'R$ 8.66', color: 'Preto' },
-    // Linha Conectores Diversos
-    { code: 'P10C', name: 'Plug P10 Classic', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'P10', price: 'R$ 7.30', color: 'Prata' },
-    { code: 'P2ST', name: 'Plug P2 Stereo', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'P2', price: 'R$ 10.50', color: 'Prata' },
-    { code: 'PXMC', name: 'Conector Cannon XLR Macho', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'XLR', price: 'R$ 7.51', color: 'Prata' },
-    { code: 'PXFC', name: 'Conector Cannon XLR Fêmea', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'XLR', price: 'R$ 7.51', color: 'Prata' },
-    { code: 'ESP', name: 'Espuma para microfone', line: 'Conectores Diversos', subtype: 'Acessório', length: '-', connector: 'Nenhum', price: 'R$ 3.20', color: 'Preto' },
-    // Linha Correias
-    { code: 'ECO CORREIA', name: 'Correia produzida em couro ecológico', line: 'Correias', subtype: 'Correia', length: '-', connector: 'Nenhum', price: 'R$ 29.46', color: 'Preto' },
-    // --- Novas Linhas e Produtos Adicionados a partir das Imagens ---
-    // DJ Series Adicionais
-    { code: 'SG02N', name: 'Cabo DJ Series 0.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.20M', connector: 'RCA + RCA', price: 'R$ 29.90', color: 'Preto' },
-    { code: 'SG06N', name: 'Cabo DJ Series 0.60M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.60M', connector: 'RCA + RCA', price: 'R$ 34.90', color: 'Preto' },
-    { code: 'SG07N', name: 'Cabo DJ Series 0.70M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.70M', connector: 'RCA + RCA', price: 'R$ 36.90', color: 'Preto' },
-    { code: 'SG09N', name: 'Cabo DJ Series 0.90M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '0.90M', connector: 'RCA + RCA', price: 'R$ 39.90', color: 'Preto' },
-    { code: 'SG12N', name: 'Cabo DJ Series 1.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.20M', connector: 'RCA + RCA', price: 'R$ 44.90', color: 'Preto' },
-    { code: 'SG13N', name: 'Cabo DJ Series 1.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.30M', connector: 'RCA + RCA', price: 'R$ 46.90', color: 'Preto' },
-    { code: 'SG14N', name: 'Cabo DJ Series 1.40M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.40M', connector: 'RCA + RCA', price: 'R$ 48.90', color: 'Preto' },
-    { code: 'SG15N', name: 'Cabo DJ Series 1.50M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.50M', connector: 'RCA + RCA', price: 'R$ 51.90', color: 'Preto' },
-    { code: 'SG16N', name: 'Cabo DJ Series 1.60M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.60M', connector: 'RCA + RCA', price: 'R$ 53.90', color: 'Preto' },
-    { code: 'SG17N', name: 'Cabo DJ Series 1.70M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '1.70M', connector: 'RCA + RCA', price: 'R$ 55.90', color: 'Preto' },
-    { code: 'SG21N', name: 'Cabo DJ Series 2.10M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.10M', connector: 'RCA + RCA', price: 'R$ 62.90', color: 'Preto' },
-    { code: 'SG22N', name: 'Cabo DJ Series 2.20M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.20M', connector: 'RCA + RCA', price: 'R$ 64.90', color: 'Preto' },
-    { code: 'SG23N', name: 'Cabo DJ Series 2.30M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.30M', connector: 'RCA + RCA', price: 'R$ 66.90', color: 'Preto' },
-    { code: 'SG25N', name: 'Cabo DJ Series 2.50M - 2 RCA + 2 RCA', line: 'DJ Series', subtype: 'Sinal', length: '2.50M', connector: 'RCA + RCA', price: 'R$ 69.90', color: 'Preto' },
-
-    // Conectores & Plugs
-    { code: 'P10MST', name: 'Plug P10 Macho Estéreo Metal Niquelado MAC', line: 'Conectores Diversos', subtype: 'Plug P10', length: 'Unidade', connector: 'P10 Macho', price: 'R$ 14.50', color: 'Prata' },
-    { code: 'JJ10S', name: 'Jack P10 Fêmea de Painel Estéreo/Mono', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Fêmea', price: 'R$ 18.90', color: 'Prata' },
-    { code: 'PCFPP', name: 'Plug P10 Fêmea Passa-Painel Profissional', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Passa-Painel', price: 'R$ 22.50', color: 'Preto/Prata' },
-    { code: 'PCPM', name: 'Plug P10 Macho de Painel Embutir', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 19.90', color: 'Prata' },
-    { code: 'PP2FM', name: 'Plug P2 Fêmea Metal Prata', line: 'Conectores Diversos', subtype: 'Plug P2', length: 'Unidade', connector: 'P2 Fêmea', price: 'R$ 12.90', color: 'Prata' },
-    { code: 'PP2MC', name: 'Plug P2 Macho Estéreo Metal Prata', line: 'Conectores Diversos', subtype: 'Plug P2', length: 'Unidade', connector: 'P2 Macho', price: 'R$ 11.90', color: 'Prata' },
-    { code: 'PRCA', name: 'Plug RCA Macho Profissional Metal', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 13.90', color: 'Dourado/Prata' },
-    { code: 'PRCA6P', name: 'Plug RCA Macho Profissional Corpo Preto', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 14.90', color: 'Preto' },
-    { code: 'PRCA6V', name: 'Plug RCA Macho Profissional Corpo Vermelho', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 14.90', color: 'Vermelho' },
-    { code: 'PXLJF', name: 'Jack XLR Fêmea de Painel / Linha', line: 'Conectores Diversos', subtype: 'Plug XLR', length: 'Unidade', connector: 'XLR Fêmea', price: 'R$ 21.90', color: 'Preto/Prata' },
-    { code: 'PXLJM', name: 'Jack XLR Macho de Painel / Linha', line: 'Conectores Diversos', subtype: 'Plug XLR', length: 'Unidade', connector: 'XLR Macho', price: 'R$ 21.90', color: 'Preto/Prata' },
-
-    // Cabos e Fios por Metro
+    // Fios Philips
+    { code: 'FPH014M', name: 'Fio Philips Stereo 2x0.14mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Philips', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 3.20/m', color: 'Preto' },
+    { code: 'FPH020M', name: 'Fio Philips Stereo 2x0.20mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Philips', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 3.50/m', color: 'Preto' },
+    { code: 'FPH030M', name: 'Fio Philips Stereo 2x0.18mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Philips', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 3.90/m', color: 'Preto' },
+    { code: 'FPH050M', name: 'Fio Philips Stereo 2x0.50mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Philips', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 5.20/m', color: 'Preto' },
+    // Fios de Microfone
+    { code: 'FM014M', name: 'Fio de Microfone 0.14mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 4.80/m', color: 'Preto' },
+    { code: 'FM020M', name: 'Fio de Microfone 0.20mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 5.50/m', color: 'Preto' },
+    { code: 'FM030BF+T', name: 'Fio de Microfone 0.30mm² Blindagem Fita + Trança por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 7.50/m', color: 'Preto' },
+    { code: 'FM050BF+T', name: 'Fio de Microfone 0.50mm² Blindagem Fita + Trança por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 9.80/m', color: 'Preto' },
+    { code: 'FM075BF+T', name: 'Fio de Microfone 0.75mm² Blindagem Fita + Trança por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 12.50/m', color: 'Preto' },
+    // Fios de Instrumento
+    { code: 'FI020M', name: 'Fio de Instrumento 0.20mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 4.20/m', color: 'Preto' },
+    { code: 'FI030M', name: 'Fio de Instrumento 0.30mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 5.50/m', color: 'Preto' },
+    { code: 'FI030BE', name: 'Fio de Instrumento 0.30mm² Blindagem Espiral por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 5.90/m', color: 'Preto' },
+    { code: 'FI040M', name: 'Fio de Instrumento 0.40mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 6.80/m', color: 'Preto' },
+    { code: 'FI075M', name: 'Fio de Instrumento 0.75mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 9.50/m', color: 'Preto' },
+    { code: 'FI150M', name: 'Fio de Instrumento 1.50mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 14.80/m', color: 'Preto' },
+    // Cabos Paralelos
     { code: 'BICOLOR', name: 'Cabo Paralelo Bicolor 2x1.00mm² por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 4.50/m', color: 'Bicolor' },
+    { code: 'CC2050', name: 'Cabo Paralelo 2x0.50mm² por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 2.80/m', color: 'Preto' },
+    { code: 'CC2075', name: 'Cabo Paralelo 2x0.75mm² por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 3.60/m', color: 'Preto' },
     { code: 'CC2100', name: 'Cabo Paralelo 2x1.00mm² Cristal/Preto por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 4.80/m', color: 'Preto' },
     { code: 'CC2150', name: 'Cabo Paralelo 2x1.50mm² Reforçado por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 6.20/m', color: 'Preto' },
     { code: 'CC2250', name: 'Cabo Paralelo 2x2.50mm² Alta Potência por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 8.90/m', color: 'Preto' },
+    { code: 'CC2400', name: 'Cabo Paralelo 2x4.00mm² Alta Potência por Metro', line: 'Fios Diversos', subtype: 'Cabo Paralelo', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 12.50/m', color: 'Preto' },
+    // Cabo Comando
     { code: 'CEF4150', name: 'Cabo Comando Extra Flexível 4x1.50mm² por Metro', line: 'Fios Diversos', subtype: 'Cabo Comando', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 12.50/m', color: 'Preto' },
-    { code: 'FI030BE', name: 'Fio de Instrumento 0.30mm² Blindagem Espiral por Metro', line: 'Fios Diversos', subtype: 'Fio Instrumento', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 5.90/m', color: 'Preto' },
-    { code: 'FM030BF+T', name: 'Fio de Microfone 0.30mm² Blindagem Fita + Trança por Metro', line: 'Fios Diversos', subtype: 'Fio Microfone', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 7.50/m', color: 'Preto' },
-    { code: 'FMC20', name: 'Fio Multicanal Medusa 20 Vias por Metro', line: 'Fio Multicanal', subtype: 'Multicanal', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 38.00/m', color: 'Preto' },
-    { code: 'FMC20P', name: 'Fio Multicanal Medusa 20 Vias com Proteção por Metro', line: 'Fio Multicanal', subtype: 'Multicanal', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 42.00/m', color: 'Preto' },
-    { code: 'FPH030M', name: 'Fio Philips Stereo 2x0.18mm² por Metro', line: 'Fios Diversos', subtype: 'Fio Philips', length: 'Metro/Rolo', connector: 'Sem Conector', price: 'R$ 3.90/m', color: 'Preto' },
 
-    // Iron Flex Tarja 90°
-    { code: 'IF10LAZT', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja AZT', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Azul Turquesa' },
-    { code: 'IF10LLA', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja LA', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Laranja' },
-    { code: 'IF10LRO', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja RO', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Vermelho' },
-    { code: 'IF10LRX', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja RX', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Roxo' },
-    { code: 'IF10LVD', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja VD', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Verde' },
-    { code: 'IF10LVM', name: 'Cabo Instrumento 10FT P10 + P10 90° Ironflex Tarja VM', line: 'Iron Flex Tarja', subtype: 'Mono', length: '10FT (3.05M)', connector: 'P10 + P10 90°', price: 'R$ 39.76', color: 'Vermelho/Vinho' },
+    // ===== LINHA CONECTORES DIVERSOS =====
+    // Plugs P10
+    { code: 'P10C', name: 'Plug P10 Classic', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'P10', price: 'R$ 7.30', color: 'Prata' },
+    { code: 'P10CST', name: 'Plug P10 Classic Stereo', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'P10 Stereo', price: 'R$ 8.90', color: 'Prata' },
+    { code: 'P10M', name: 'Plug P10 Macho Metal', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'P10 Macho', price: 'R$ 12.50', color: 'Prata' },
+    { code: 'P10MST', name: 'Plug P10 Macho Estéreo Metal Niquelado MAC', line: 'Conectores Diversos', subtype: 'Plug P10', length: 'Unidade', connector: 'P10 Macho', price: 'R$ 14.50', color: 'Prata' },
+    { code: 'P10CB', name: 'Plug P10 Classic Basic', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'P10', price: 'R$ 6.50', color: 'Prata' },
+    { code: 'P10MST EXTEND', name: 'Plug P10 Macho Estéreo Extend', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'P10 Macho', price: 'R$ 15.90', color: 'Prata' },
+    { code: 'P10M9ST', name: 'Plug P10 Macho 90º Estéreo', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'P10 90°', price: 'R$ 16.50', color: 'Prata' },
+    // Plug P2
+    { code: 'P2ST', name: 'Plug P2 Stereo', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'P2', price: 'R$ 10.50', color: 'Prata' },
+    { code: 'P2STF', name: 'Plug P2 Stereo Fêmea', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'P2 Fêmea', price: 'R$ 11.50', color: 'Prata' },
+    { code: 'PP2FM', name: 'Plug P2 Fêmea Metal Prata', line: 'Conectores Diversos', subtype: 'Plug P2', length: 'Unidade', connector: 'P2 Fêmea', price: 'R$ 12.90', color: 'Prata' },
+    { code: 'PP2MC', name: 'Plug P2 Macho Estéreo Metal Prata', line: 'Conectores Diversos', subtype: 'Plug P2', length: 'Unidade', connector: 'P2 Macho', price: 'R$ 11.90', color: 'Prata' },
+    // Plugs XLR
+    { code: 'PXMC', name: 'Conector Cannon XLR Macho', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'XLR', price: 'R$ 7.51', color: 'Prata' },
+    { code: 'PXFC', name: 'Conector Cannon XLR Fêmea', line: 'Conectores Diversos', subtype: 'Plug', length: '-', connector: 'XLR', price: 'R$ 7.51', color: 'Prata' },
+    { code: 'PXLJF', name: 'Jack XLR Fêmea de Painel / Linha', line: 'Conectores Diversos', subtype: 'Plug XLR', length: 'Unidade', connector: 'XLR Fêmea', price: 'R$ 21.90', color: 'Preto/Prata' },
+    { code: 'PXLJM', name: 'Jack XLR Macho de Painel / Linha', line: 'Conectores Diversos', subtype: 'Plug XLR', length: 'Unidade', connector: 'XLR Macho', price: 'R$ 21.90', color: 'Preto/Prata' },
+    // Plugs RCA
+    { code: 'PRCA', name: 'Plug RCA Macho Profissional Metal', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 13.90', color: 'Dourado/Prata' },
+    { code: 'PRCA6P', name: 'Plug RCA Macho Profissional Corpo Preto', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 14.90', color: 'Preto' },
+    { code: 'PRCA6V', name: 'Plug RCA Macho Profissional Corpo Vermelho', line: 'Conectores Diversos', subtype: 'Plug RCA', length: 'Unidade', connector: 'RCA Macho', price: 'R$ 14.90', color: 'Vermelho' },
+    // Plugs de Painel
+    { code: 'JJ10S', name: 'Jack P10 Fêmea de Painel Estéreo/Mono', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Fêmea', price: 'R$ 18.90', color: 'Prata' },
+    { code: 'JJ10MST', name: 'Jack P10 Macho de Painel Estéreo', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 19.90', color: 'Prata' },
+    { code: 'JJ10MSPT', name: 'Jack P10 Macho de Painel Estéreo Preto', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 20.50', color: 'Preto' },
+    { code: 'PCFPP', name: 'Plug P10 Fêmea Passa-Painel Profissional', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Passa-Painel', price: 'R$ 22.50', color: 'Preto/Prata' },
+    { code: 'PCFPN', name: 'Plug P10 Fêmea Passa-Painel Niquelado', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Passa-Painel', price: 'R$ 23.50', color: 'Niquelado' },
+    { code: 'PCMPP', name: 'Plug P10 Macho de Painel Preto', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 20.90', color: 'Preto' },
+    { code: 'PCMPN', name: 'Plug P10 Macho de Painel Niquelado', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 21.90', color: 'Niquelado' },
+    { code: 'PCPM', name: 'Plug P10 Macho de Painel Embutir', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 19.90', color: 'Prata' },
+    { code: 'PCPME', name: 'Plug P10 Macho de Painel Embutir Estéreo', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Macho Painel', price: 'R$ 21.50', color: 'Prata' },
+    { code: 'J10STP', name: 'Jack P10 de Painel Stereo', line: 'Conectores Diversos', subtype: 'Painel', length: 'Unidade', connector: 'P10 Fêmea', price: 'R$ 18.50', color: 'Prata' },
+    // Outros Conectores
+    { code: 'PDIN5', name: 'Conector DIN 5 Pinos', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'DIN 5', price: 'R$ 16.90', color: 'Prata' },
+    { code: 'PSPK4', name: 'Plug Speakon 4 Vias', line: 'Conectores Diversos', subtype: 'Plug', length: 'Unidade', connector: 'Speakon 4', price: 'R$ 24.90', color: 'Preto' },
+    { code: 'ESP', name: 'Espuma para microfone', line: 'Conectores Diversos', subtype: 'Acessório', length: '-', connector: 'Nenhum', price: 'R$ 3.20', color: 'Preto' },
 
-    // Vintage Espiral 90°
-    { code: 'ESP30LAZB', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul/Branco', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul/Branco' },
-    { code: 'ESP30LAZE', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul Escuro', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul Escuro' },
-    { code: 'ESP30LAZP', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul/Preto', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul/Preto' },
-    { code: 'ESP30LAZT', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Azul Turquesa', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Azul Turquesa' },
-    { code: 'ESP30LPT', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Preto Têxtil', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Preto Têxtil' },
-    { code: 'ESP30LRX', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Roxo', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Roxo' },
-    { code: 'ESP30LVM', name: 'Cabo Instrumento 30FT (9.10M) P10 + P10 90° Espiral Vermelho/Vinho', line: 'Vintage Espiral', subtype: 'Mono', length: '30FT (9.10M)', connector: 'P10 + P10 90°', price: 'R$ 139.00', color: 'Vermelho' },
-
-    // Pedal & Speaker Series
-    { code: 'PIM15LTX', name: 'Cabo Interconexão Pedal 15CM P10 90° + P10 90° Têxtil', line: 'Pedal Series', subtype: 'Pedal', length: '0.15M', connector: 'P10 90° + P10 90°', price: 'R$ 29.90', color: 'Têxtil' },
-    { code: 'SSC103', name: 'Cabo Caixa Acústica 10FT (3.05M) Speakon + Speakon Speaker Series', line: 'Speaker', subtype: 'Speaker', length: '10FT (3.05M)', connector: 'Speakon + Speakon', price: 'R$ 89.90', color: 'Preto' }
+    // ===== LINHA CORREIAS =====
+    { code: 'ECO CORREIA', name: 'Correia produzida em couro ecológico', line: 'Correias', subtype: 'Correia', length: '-', connector: 'Nenhum', price: 'R$ 29.46', color: 'Preto' }
 ];
 
 const productImageMap = {
@@ -256,7 +394,7 @@ const productImageMap = {
     'FMC20': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg',
     'FMC20P': '../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg',
     'FPH030M': '../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG',
-    'CS10LB': '../img/products/CACAU SANTOS/CS10LB lan�amento.jpeg',
+    'CS10LB': '../img/products/CACAU SANTOS/CS10LB.jpeg',
     'CS15LB': '../img/products/CACAU SANTOS/CS15LB.jpeg',
     'IC10B': '../img/products/CLASSIC SERIES/IC10B..jpg',
     'MC03XB': '../img/products/CLASSIC SERIES/MC03XB.jpg',
@@ -304,7 +442,7 @@ const productImageMap = {
     'KL10LB': '../img/products/KING SERIES/KL10LB (2).jpg',
     'PIM15B': '../img/products/PEDAL SERIES/PIM15B...jpg',
     'PIM15LTX': '../img/products/PEDAL SERIES/PIM15LTX.jpg',
-    'PIM25B': '../img/products/PEDAL SERIES/PIM25B,.jpg',
+    'PIM25B': '../img/products/PEDAL SERIES/PIM25B...........jpg',
     'PIM45B': '../img/products/PEDAL SERIES/PIM45B,.jpg',
     'P10MST': '../img/products/PLUGS/P10 MACHO/P10MST.jpg',
     'JJ10S': '../img/products/PLUGS/PLUGS DE PAINEL/JJ10S (2).jpg',
@@ -351,7 +489,7 @@ const productImagesMap = {
     'FMC20': ['../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20.jpg'],
     'FMC20P': ['../img/products/CABOS EM METRO/FIO MULTICANAL - MEDUSA/FMC20P.jpg'],
     'FPH030M': ['../img/products/CABOS EM METRO/FIO PHILIPS/FPH030M.JPG'],
-    'CS10LB': ['../img/products/CACAU SANTOS/CS10LB lançamento.jpeg', '../img/products/CACAU SANTOS/CS10LB pacote.png', '../img/products/CACAU SANTOS/CS10LB.jpeg'],
+    'CS10LB': ['../img/products/CACAU SANTOS/CS10LB.jpeg', '../img/products/CACAU SANTOS/CS10LB pacote.png', '../img/products/CACAU SANTOS/CS10LB lancamento.jpeg'],
     'CS15LB': ['../img/products/CACAU SANTOS/CS15LB.jpeg'],
     'IC10B': ['../img/products/CLASSIC SERIES/IC10B..jpg', '../img/products/CLASSIC SERIES/IC10B.jpg'],
     'MC03XB': ['../img/products/CLASSIC SERIES/MC03XB.jpg'],
@@ -399,7 +537,7 @@ const productImagesMap = {
     'KL10LB': ['../img/products/KING SERIES/KL10LB (2).jpg', '../img/products/KING SERIES/KL10LB.jpg'],
     'PIM15B': ['../img/products/PEDAL SERIES/PIM15B...jpg', '../img/products/PEDAL SERIES/PIM15B..jpg', '../img/products/PEDAL SERIES/PIM15B.jpg'],
     'PIM15LTX': ['../img/products/PEDAL SERIES/PIM15LTX.jpg'],
-    'PIM25B': ['../img/products/PEDAL SERIES/PIM25B,.jpg', '../img/products/PEDAL SERIES/PIM25B...........jpg', '../img/products/PEDAL SERIES/PIM25B.......jpg', '../img/products/PEDAL SERIES/PIM25B.....jpg', '../img/products/PEDAL SERIES/PIM25B....jpg', '../img/products/PEDAL SERIES/PIM25B...jpg', '../img/products/PEDAL SERIES/PIM25B..jpg', '../img/products/PEDAL SERIES/PIM25B.jpg'],
+    'PIM25B': ['../img/products/PEDAL SERIES/PIM25B...........jpg', '../img/products/PEDAL SERIES/PIM25B.......jpg', '../img/products/PEDAL SERIES/PIM25B.....jpg', '../img/products/PEDAL SERIES/PIM25B....jpg', '../img/products/PEDAL SERIES/PIM25B...jpg', '../img/products/PEDAL SERIES/PIM25B..jpg', '../img/products/PEDAL SERIES/PIM25B.jpg'],
     'PIM45B': ['../img/products/PEDAL SERIES/PIM45B,.jpg', '../img/products/PEDAL SERIES/PIM45B.jpg'],
     'P10MST': ['../img/products/PLUGS/P10 MACHO/P10MST.jpg'],
     'JJ10S': ['../img/products/PLUGS/PLUGS DE PAINEL/JJ10S (2).jpg', '../img/products/PLUGS/PLUGS DE PAINEL/JJ10S.jpg'],
@@ -457,7 +595,7 @@ const lineImagesMap = {
     'Cacau Santos Signature': [
         '../img/products/CACAU SANTOS/CS10LB.jpeg',
         '../img/products/CACAU SANTOS/CS10LB pacote.png',
-        '../img/products/CACAU SANTOS/CS10LB lançamento.jpeg',
+        '../img/products/CACAU SANTOS/CS10LB lancamento.jpeg',
         '../img/products/CACAU SANTOS/CS15LB.jpeg'
     ],
     'Iron Flex': [
@@ -560,6 +698,38 @@ const lineImagesMap = {
     ]
 };
 
+const productImageColorMap = {
+    'PIM15B': {
+        '../img/products/PEDAL SERIES/PIM15B...jpg': 'Rosa',
+        '../img/products/PEDAL SERIES/PIM15B..jpg': 'Azul',
+        '../img/products/PEDAL SERIES/PIM15B.jpg': 'Preto'
+    },
+    'PIM25B': {
+        '../img/products/PEDAL SERIES/PIM25B...........jpg': 'Azul',
+        '../img/products/PEDAL SERIES/PIM25B.......jpg': 'Azul',
+        '../img/products/PEDAL SERIES/PIM25B.....jpg': 'Vermelho',
+        '../img/products/PEDAL SERIES/PIM25B....jpg': 'Verde',
+        '../img/products/PEDAL SERIES/PIM25B...jpg': 'Preto',
+        '../img/products/PEDAL SERIES/PIM25B..jpg': 'Amarelo',
+        '../img/products/PEDAL SERIES/PIM25B.jpg': 'Laranja'
+    },
+    'PIM45B': {
+        '../img/products/PEDAL SERIES/PIM45B,.jpg': 'Vermelho',
+        '../img/products/PEDAL SERIES/PIM45B.jpg': 'Preto'
+    }
+};
+
+/**
+ * Returns the color associated with a product image, if defined.
+ */
+function getProductImageColor(product, imageUrl) {
+    if (!product || !imageUrl) return null;
+    const colorMap = productImageColorMap[product.code];
+    if (!colorMap) return null;
+    const decoded = decodeURI(imageUrl);
+    return colorMap[decoded] || null;
+}
+
 /**
  * Returns a product image URL if available, otherwise falls back to a line image or a generated SVG.
  */
@@ -569,11 +739,15 @@ function getProductImageUrl(product) {
     if (Array.isArray(imagesArr) && imagesArr.length > 0) {
         return encodeURI(imagesArr[0]);
     }
+    const singleImage = productImageMap[product.code];
+    if (singleImage) {
+        return encodeURI(singleImage);
+    }
     const lineImagesArr = lineImagesMap[product.line];
     if (Array.isArray(lineImagesArr) && lineImagesArr.length > 0) {
         return encodeURI(lineImagesArr[0]);
     }
-    const imagePath = productImageMap[product.code] || lineImageMap[product.line];
+    const imagePath = lineImageMap[product.line];
     if (imagePath) {
         return encodeURI(imagePath);
     }
@@ -613,7 +787,7 @@ function getProductImageUrl(product) {
         <rect x="140" y="30" width="120" height="22" fill="${accent}" opacity="0.2" rx="11"/>
         <text x="200" y="45" font-family="Oswald, sans-serif" font-size="12" font-weight="bold" fill="${accent}" text-anchor="middle" letter-spacing="1.5">${title}</text>
         <text x="200" y="210" font-family="Roboto, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">${product.code}</text>
-        <text x="200" y="230" font-family="Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">${sub} �?� ${colorTag}</text>
+        <text x="200" y="230" font-family="Roboto, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">${sub} • ${colorTag}</text>
     </svg>`;
 
     return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
@@ -626,10 +800,12 @@ function getProductImages(product) {
     if (!product) return [];
     const imagesArr = productImagesMap[product.code];
     if (Array.isArray(imagesArr) && imagesArr.length > 0) return imagesArr.map(p => encodeURI(p));
+    const single = productImageMap[product.code];
+    if (single) return [encodeURI(single)];
     const lineImagesArr = lineImagesMap[product.line];
     if (Array.isArray(lineImagesArr) && lineImagesArr.length > 0) return lineImagesArr.map(p => encodeURI(p));
-    const single = productImageMap[product.code] || lineImageMap[product.line];
-    if (single) return [encodeURI(single)];
+    const lineSingle = lineImageMap[product.line];
+    if (lineSingle) return [encodeURI(lineSingle)];
     return [getProductImageUrl(product)];
 }
 
@@ -659,4 +835,3 @@ function getRelatedProducts(product, limit = 3) {
     const others = products.filter(p => p.code !== product.code && !sameLine.includes(p));
     return [...sameLine, ...others].slice(0, limit);
 }
-

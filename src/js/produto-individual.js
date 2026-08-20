@@ -239,6 +239,6 @@ window.addEventListener('DOMContentLoaded', () => {
             lens.classList.add('hidden');
             lens.style.backgroundImage = `url('${mainImg.src}')`;
         });
-        setupMagnifier(mainImg, lens, 0.5);
+        setupMagnifier(mainImg, lens, 0.25);
     }
 });

@@ -37,14 +37,11 @@
             <a href="src/html/catalogo.html" class="btn-cyan">Explorar Produtos &rarr;</a>
         </section>
 
-        <section class="intro">
-            <div class="intro-content">
-                <h2>Inovação e Extrema Resistência.</h2>
-                <p>Garantindo qualidade, durabilidade e som puro para a sua estrada. Explore os cabos e conexões projetados
-                    para suportar as condições mais extremas de palco e transporte — <strong>feito por/para quem ama
-                        timbre.</strong></p>
-            </div>
-            <div class="intro-carousel" aria-label="Carrossel de produtos MAC Cabos">
+        <section class="carousel-section">
+            <div class="carousel-wrapper" aria-label="Carrossel de produtos MAC Cabos">
+                <button class="carousel-btn carousel-btn-prev" aria-label="Produto anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
                 <div class="carousel-track">
                     <img src="src/img/products/CLASSIC SERIES/IC10B.jpg" alt="Cabo Classic">
                     <img src="src/img/products/IRONFLEX SERIES/IF10LB.jpg" alt="Cabo Iron Flex">
@@ -52,6 +49,18 @@
                     <img src="src/img/products/ACOUSTIC SERIES/AS10LB.jpg" alt="Cabo Acoustic">
                     <img src="src/img/products/KEYBOARD SERIES/Keyboard Series Teclado.jpeg" alt="Cabo Keyboard">
                 </div>
+                <button class="carousel-btn carousel-btn-next" aria-label="Próximo produto">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="intro-content">
+                <h2>Inovação e Extrema Resistência.</h2>
+                <p>Garantindo qualidade, durabilidade e som puro para a sua estrada. Explore os cabos e conexões projetados
+                    para suportar as condições mais extremas de palco e transporte — <strong>feito por/para quem ama
+                        timbre.</strong></p>
             </div>
         </section>
 
@@ -255,6 +264,8 @@
     <button id="theme-toggle-btn" aria-label="Ativar modo claro">
         <i class="fas fa-sun"></i>
     </button>
+
+    <script src="src/js/carousel.js"></script>
 
 </body>
 

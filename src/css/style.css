@@ -124,13 +124,24 @@ html.light-theme .intro {
     background: linear-gradient(135deg, rgba(0,148,200,0.05), rgba(244,246,249,0.98));
     border-bottom-color: var(--border-color);
 }
-html.light-theme .intro-carousel {
+html.light-theme .intro-content {
+    max-width: 560px;
+}
+html.light-theme .carousel-wrapper {
     border-color: rgba(0, 0, 0, 0.08);
     background: rgba(0, 0, 0, 0.02);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
 }
 html.light-theme .carousel-track img {
     border-color: rgba(0, 0, 0, 0.06);
+}
+html.light-theme .carousel-btn {
+    background: rgba(0, 0, 0, 0.12);
+    color: #111827;
+}
+html.light-theme .carousel-btn:hover {
+    background: #0094c8;
+    color: #ffffff;
 }
 
 /* Cards */
@@ -280,6 +291,17 @@ html.light-theme .canal-card {
 html.light-theme .canal-card:hover {
     border-color: #0094c8;
     box-shadow: 0 18px 40px rgba(0, 148, 200, 0.08);
+}
+
+/* WhatsApp section (light theme) */
+html.light-theme .whatsapp-section .whatsapp-card {
+    background-color: #ffffff;
+    background-image: none;
+    border-color: #0094c8;
+    box-shadow: 0 8px 28px rgba(0, 148, 200, 0.10);
+}
+html.light-theme .whatsapp-section .whatsapp-card:hover {
+    box-shadow: 0 12px 36px rgba(0, 148, 200, 0.18);
 }
 
 /* Form */
@@ -1486,6 +1508,72 @@ main {
 
 .canal-card h3 { font-family: 'Oswald', sans-serif; font-size: 20px; text-transform: uppercase; margin-bottom: 15px; }
 .canal-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 5px; }
+.canal-info a { color: inherit; text-decoration: none; transition: color 0.3s ease, border-bottom 0.2s ease; }
+.canal-info a:hover { color: var(--primary-cyan); border-bottom: 1px dashed var(--primary-cyan); }
+
+/* --- WhatsApp section (Quero Revender) --- */
+.whatsapp-section { padding: 0 10% 20px; }
+.whatsapp-section .whatsapp-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(0, 180, 235, 0.12), rgba(0, 180, 235, 0.06));
+    border: 1px solid var(--primary-cyan);
+    border-radius: 12px;
+    padding: 20px 24px;
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 8px 28px rgba(0, 180, 235, 0.15);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.whatsapp-section .whatsapp-card:hover {
+    transform: translateY(-4px);
+    border-color: #25d366;
+    box-shadow: 0 12px 36px rgba(0, 180, 235, 0.22);
+}
+.whatsapp-section .whatsapp-card i.fab {
+    font-size: 32px;
+    color: #25d366;
+    flex-shrink: 0;
+}
+.whatsapp-section .whatsapp-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.whatsapp-section .whatsapp-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+.whatsapp-section .whatsapp-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.whatsapp-section .whatsapp-number:hover { color: var(--primary-cyan); }
+.whatsapp-section .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-section .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+}
 
 .form-feedback {
     margin-top: 18px;
@@ -2206,10 +2294,7 @@ footer {
 
 /* --- INTRO SECTION --- */
 .intro {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 36px;
-    align-items: center;
+    text-align: center;
     padding: 80px 10%;
     background: linear-gradient(135deg, rgba(0,180,235,0.06), rgba(6,9,14,0.95));
     border-bottom: 1px solid #1f2937;
@@ -2217,6 +2302,7 @@ footer {
 
 .intro-content {
     max-width: 560px;
+    margin: 0 auto;
 }
 
 .intro h2 {
@@ -2232,35 +2318,66 @@ footer {
     line-height: 1.8;
 }
 
-.intro-carousel {
+/* --- CAROUSEL SECTION --- */
+.carousel-section {
+    padding: 50px 10%;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 16px;
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
     background: rgba(255,255,255,0.03);
-    padding: 10px;
+    padding: 12px;
 }
 
 .carousel-track {
     display: flex;
-    width: max-content;
-    animation: carouselSlide 18s linear infinite;
+    width: 100%;
+    transition: transform 0.5s ease;
 }
 
 .carousel-track img {
-    width: 320px;
-    height: 220px;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
     border-radius: 12px;
-    margin-right: 12px;
     flex-shrink: 0;
     border: 1px solid rgba(255,255,255,0.08);
 }
 
-@keyframes carouselSlide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.25);
+    color: var(--text-white);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
 }
+
+.carousel-btn:hover {
+    background: var(--primary-cyan);
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn-prev { left: 8px; }
+.carousel-btn-next { right: 8px; }
 
 /* --- PRODUTOS SECTION --- */
 .produtos {
@@ -2487,5 +2604,14 @@ footer {
     }
     .footer-grid {
         grid-template-columns: 1fr;
+    }
+    .carousel-track img {
+        width: 220px;
+        height: 150px;
+    }
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
     }
 }

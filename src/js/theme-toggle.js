@@ -45,13 +45,39 @@
     // Apply saved theme immediately (before paint) to avoid flash
     applyTheme(getSavedTheme());
 
-    // Once DOM is ready, wire up the button
+    // Once DOM is ready, wire up the button and insert elements
     document.addEventListener('DOMContentLoaded', function () {
         const btn = document.getElementById('theme-toggle-btn');
+        const header = document.querySelector('header');
+        
+        // Move theme toggle button to header and group it with the CTA button
+        if (btn && header) {
+            const ctaBtn = header.querySelector('.btn-outline');
+            if (ctaBtn) {
+                const actionsContainer = document.createElement('div');
+                actionsContainer.className = 'header-actions';
+                ctaBtn.parentNode.insertBefore(actionsContainer, ctaBtn);
+                actionsContainer.appendChild(ctaBtn);
+                actionsContainer.appendChild(btn);
+            } else {
+                header.appendChild(btn);
+            }
+        }
+        
         if (btn) {
             btn.addEventListener('click', toggleTheme);
         }
         // Re-apply so the icon is correct after DOM load
         applyTheme(getSavedTheme());
+
+        // Create and add floating WhatsApp button where the theme toggle was
+        const waBtn = document.createElement('a');
+        waBtn.id = 'floating-whatsapp-btn';
+        waBtn.href = 'https://wa.me/5511977709800';
+        waBtn.target = '_blank';
+        waBtn.rel = 'noopener';
+        waBtn.setAttribute('aria-label', 'Fale conosco no WhatsApp');
+        waBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
+        document.body.appendChild(waBtn);
     });
 })();
